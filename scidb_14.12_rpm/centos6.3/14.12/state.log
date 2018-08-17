@@ -1,0 +1,20 @@
+2014-12-23 12:42:51,650 - Mock Version: 1.1.24
+2014-12-23 12:42:51,654 - Start: unpacking root cache
+2014-12-23 12:42:55,849 - Finish: unpacking root cache
+2014-12-23 12:42:55,851 - Start: cleaning yum metadata
+2014-12-23 12:42:55,862 - Finish: cleaning yum metadata
+2014-12-23 12:42:55,930 - Start: device setup
+2014-12-23 12:42:55,938 - Finish: device setup
+2014-12-23 12:42:55,939 - Start: yum update
+2014-12-23 12:43:06,983 - Finish: yum update
+2014-12-23 12:43:07,119 - Finish: lock buildroot
+2014-12-23 12:43:07,119 - Finish: chroot init
+2014-12-23 12:43:07,321 - Start: build phase for scidb-14.12-0-8690.src.rpm
+2014-12-23 12:43:07,321 - Start: device setup
+2014-12-23 12:43:07,325 - Finish: device setup
+2014-12-23 12:43:07,374 - Start: build setup for scidb-14.12-0-8690.src.rpm
+2014-12-23 12:44:24,124 - Finish: build setup for scidb-14.12-0-8690.src.rpm
+2014-12-23 12:44:24,125 - Start: rpmbuild -bb scidb-14.12-0-8690.src.rpm
+2014-12-23 13:04:43,192 - Finish: rpmbuild -bb scidb-14.12-0-8690.src.rpm
+2014-12-23 13:04:43,778 - Finish: build phase for scidb-14.12-0-8690.src.rpm
+2014-12-23 13:04:43,808 - Finish: run

@@ -1,0 +1,1548 @@
+Mock Version: 1.1.24
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/scidb.spec'], False, '/var/lib/mock/centos-6-x86_64/root/', None, 0, True, False, 500, 497, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x2a05c90>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/scidb.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/scidb-14.12-0-8690.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/scidb.spec'], False, '/var/lib/mock/centos-6-x86_64/root/', None, 0, True, False, 500, 497, None, False, {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x2a05c90>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps builddir/build/SPECS/scidb.spec'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.ZqgxON
++ umask 022
++ cd /builddir/build/BUILD
++ LANG=C
++ export LANG
++ unset DISPLAY
++ cd /builddir/build/BUILD
++ rm -rf scidb-14.12-0
++ /bin/mkdir -p scidb-14.12-0
++ cd scidb-14.12-0
++ /usr/bin/gzip -dc /builddir/build/SOURCES/scidb.tar.gz
++ /bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ /bin/chmod -Rf a+rX,u+w,g-w,o-w .
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.xOctyb
++ exit 0
++ umask 022
++ cd /builddir/build/BUILD
++ cd scidb-14.12-0
++ LANG=C
++ export LANG
++ unset DISPLAY
++ cmake . -DSWIG_EXECUTABLE=/usr/bin/swig2 -DSCIDB_DOC_TYPE=API -DBUILD_USER_DOC=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+-- ****************** BEGIN CMakeLists.txt ******************
+-- The C compiler identification is GNU 4.4.7
+-- The CXX compiler identification is GNU 4.4.7
+-- The Fortran compiler identification is GNU
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working Fortran compiler: /usr/bin/gfortran
+-- Check for working Fortran compiler: /usr/bin/gfortran  -- works
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Checking whether /usr/bin/gfortran supports Fortran 90
+-- Checking whether /usr/bin/gfortran supports Fortran 90 -- yes
+-- CMAKE_INSTALL_PREFIX Initialized to default setting to: /opt/scidb/14.12
+-- Could NOT find Subversion (missing:  Subversion_SVN_EXECUTABLE) 
+-- Found Git: /usr/bin/git (found version "1.7.1") 
+-- Reading revision from file: 8690
+-- Build type (use -DCMAKE_BUILD_TYPE=[RelWithDebInfo]/Debug/Release/Profile/CC/Valgrind): RelWithDebInfo
+-- DISTRO_NAME_VER is CentOS-6.6
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.23") 
+-- Found LibRT: /usr/lib64/librt.so  
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   system
+--   program_options
+--   serialization
+--   regex
+--   filesystem
+--   thread
+--   date_time
+-- Found Protobuf: /usr/include/google/protobuf  
+-- GPB - /usr/lib64/libprotobuf.so
+-- Found Log4CXX: /usr/lib64/liblog4cxx.so  
+-- LOG4CXX - /usr/lib64/liblog4cxx.so
+-- Found Doxygen: /usr/bin/doxygen (found version "1.6.1") 
+-- Found LibPQXX: /usr/lib  
+-- Found LibPQ: /usr/bin/pg_config  
+-- Found LibPQ: /usr/lib64  
+-- checking for module 'cppunit'
+--   found cppunit, version 1.12.1
+-- Found SWIG2: /usr/bin/swig2 (Required is at least version "2.0") 
+-- Found PythonLibs: /usr/lib64/libpython2.6.so (found version "2.6.6") 
+-- Found FLEX: /usr/bin/flex  
+-- Found BISON: /usr/bin/bison  
+-- Found SED: /bin/sed  
+-- Found ZLIB: /usr/lib64/libz.so (found version "1.2.3") 
+-- Found BZip2: /usr/lib64/libbz2.so (found version "1.0.5") 
+-- Looking for BZ2_bzCompressInit in /usr/lib64/libbz2.so
+-- Looking for BZ2_bzCompressInit in /usr/lib64/libbz2.so - found
+-- Found LibReadline: /usr/lib64/libreadline.so  
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PythonInterp: /usr/bin/python (found version "2.6.6") 
+-- Looking for Fortran sgemm
+-- Looking for Fortran sgemm - found
+-- A library with BLAS API found.
+-- A library with BLAS API found.
+-- Looking for Fortran cheev
+-- Looking for Fortran cheev - found
+-- A library with LAPACK API found.
+-- Found XSLTPROC: /usr/bin/xsltproc  
+-- Found FOP: /usr/bin/fop  
+-- Found docbook.xsl: /usr/share/sgml/docbook/xsl-stylesheets-1.75.2/fo/docbook.xsl  
+-- Looking for malloc_stats
+-- Looking for malloc_stats - found
+-- ****************** BEGIN src/CMakeLists.txt ******************
+-- SWIG 2 and Python found. Python module will built
+-- Configuring /builddir/build/BUILD/scidb-14.12-0/src/system/Constants.cpp.in as /builddir/build/BUILD/scidb-14.12-0/src/system/Constants.cpp
+-- Configuring /builddir/build/BUILD/scidb-14.12-0/src/system/System.h.in as /builddir/build/BUILD/scidb-14.12-0/src/system/System.h
+-- Configuring /builddir/build/BUILD/scidb-14.12-0/src/util/scidb-sample.conf.in as /builddir/build/BUILD/scidb-14.12-0/bin/packaging_only/scidb-sample.conf
+-- **BEGIN util/dmalloc/CMakeLists.txt --------------------------------
+-- Debug: CMAKE_C_FLAGS is  -pedantic -W -Wextra -Wall -Wno-long-long -Wno-unused-parameter -fPIC -D__STDC_FORMAT_MACROS
+-- Debug: CMAKE_CXX_FLAGS is  -std=c++98 -pedantic -W -Wextra -Wall -Wno-strict-aliasing -Wno-long-long -Wno-unused-parameter -Wno-variadic-macros -fPIC -D__STDC_FORMAT_MACROS -Wno-system-headers -isystem /opt/local/include/ -isystem /usr/local/include/ -D__STDC_LIMIT_MACROS -DPROJECT_ROOT=\"/builddir/build/BUILD/scidb-14.12-0/\"
+-- Debug: GENERAL_OUTPUT_DIRECTORY is /builddir/build/BUILD/scidb-14.12-0/bin
+-- **END util/dmalloc/CMakeLists.txt --------------------------------
+-- ****************** BEGIN src/mpi/CMakeLists.txt ******************
+-- WARNING-- using locally installed MPICH2
+-- Local MPICH2 path: /opt/scidb/14.12/3rdparty/mpich2
+-- WARNING-- using locally installed ScaLAPACK for MPICH2
+-- Debug: To refresh/rebuild the local copy of scalapack, remove /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container.
+-- ****************** BEGIN mpi/local_scalapack/CMakeLists.txt ******************
+-- DEBUG BLAS_FOUND=TRUE LAPACK_FOUND=TRUE MPICH_FOUND=1
+-- WARNING-- using locally built libscalapack.a
+-- DEBUG-- UNTAR_DIR=/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2
+-- DEBUG-- MPICH2_SUFFIX=
+-- DEBUG-- MPI_INCLUDE=-I /opt/scidb/14.12/3rdparty/mpich2/include/mpich2
+-- DEBUG-- BLAS_LIBRARIES=/usr/lib64/libblas.so
+-- DEBUG-- LOCAL_LAPACK_LIBRARIES=/usr/lib64/liblapack.so /usr/lib64/libblas.so
+-- DEBUG-- LOCAL_MPI_PATH=/opt/scidb/14.12/3rdparty/mpich2
+-- DEBUG-- PRIMARY_STATUS=0
+-- www.netlib.org is up.
+-- Debug: SCALAPACK_LIBRARIES is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib/libscalapack.a
+-- Debug: SCALAPACK_INC_DIR is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib/include
+-- Debug: FINAL PACKAGE SETTINGS src/mpi ================================>
+-- Debug: SCALAPACK_LIBRARIES is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib/libscalapack.a
+-- Debug: LAPACK_LIBRARIES is /usr/lib64/liblapack.so;/usr/lib64/libblas.so
+-- Debug: BLAS_LIBRARIES is /usr/lib64/libblas.so
+-- Debug: MPI_LIBRARIES is /opt/scidb/14.12/3rdparty/mpich2/lib/libmpichf90.a
+-- Debug: MPI_INCLUDE is -I /opt/scidb/14.12/3rdparty/mpich2/include/mpich2
+-- Debug: MPI_Fortran_COMPILER is /opt/scidb/14.12/3rdparty/mpich2/bin/mpif77
+-- Debug: CMAKE_C_FLAGS is  -pedantic -W -Wextra -Wall -Wno-long-long -Wno-unused-parameter -fPIC -D__STDC_FORMAT_MACROS
+-- Debug: CMAKE_CXX_FLAGS is  -std=c++98 -pedantic -W -Wextra -Wall -Wno-strict-aliasing -Wno-long-long -Wno-unused-parameter -Wno-variadic-macros -fPIC -D__STDC_FORMAT_MACROS -Wno-system-headers -isystem /opt/local/include/ -isystem /usr/local/include/ -D__STDC_LIMIT_MACROS -DPROJECT_ROOT=\"/builddir/build/BUILD/scidb-14.12-0/\" -DOMPI_IGNORE_CXX_SEEK -lgfortran
+-- Debug: CMAKE_Fortran_FLAGS is  -fno-f2c -Wline-truncation -I/opt/scidb/14.12/3rdparty/mpich2/include/mpi -I/opt/scidb/14.12/3rdparty/boost/include/boost 
+-- Debug: CMAKE_Fortran_COMPLIER is /usr/bin/gfortran
+-- Debug: CMAKE_CXX_COMPILER is /usr/bin/c++
+-- Debug: FINAL PACKAGE SETTINGS <================================
+-- Debug: Building MPI Slave
+-- ****************** BEGIN mpi/slaving/CMakeLists.txt ******************
+-- Debug: CMAKE_CXX_COMPLIER is /opt/scidb/14.12/3rdparty/mpich2/bin/mpic++
+-- Debug: CMAKE_Fortran_COMPLIER is /opt/scidb/14.12/3rdparty/mpich2/bin/mpif77
+-- Debug: CMAKE_C_FLAGS is  -pedantic -W -Wextra -Wall -Wno-long-long -Wno-unused-parameter -fPIC -D__STDC_FORMAT_MACROS -I /opt/scidb/14.12/3rdparty/mpich2/include/mpich2 -I /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib/include
+-- Debug: SCALAPACK_BUILD_DIR  is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build
+-- Debug: SCALAPACK_INC_DIR  is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib/include
+-- ****************** END mpi/slaving/CMakeLists.txt ******************
+-- ****************** END src/mpi/CMakeLists.txt ******************
+-- *****BEGIN dense_linear_algebra/CMakeLists.txt ***********************
+-- Found MPI_C: /opt/scidb/14.12/3rdparty/mpich2/lib/libmpich.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libopa.a;/usr/lib64/libpthread.so;/usr/lib64/librt.so  
+-- Found MPI_CXX: /opt/scidb/14.12/3rdparty/mpich2/lib/libmpichcxx.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libmpich.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libopa.a;/usr/lib64/libpthread.so;/usr/lib64/librt.so  
+-- Found MPI_Fortran: /opt/scidb/14.12/3rdparty/mpich2/lib/libmpich.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libopa.a;/usr/lib64/libpthread.so;/usr/lib64/librt.so  
+-- MPI_Fortran_COMPILER=/opt/scidb/14.12/3rdparty/mpich2/bin/mpif77
+-- Debug: BLAS_LIBRARIES is /usr/lib64/libblas.so
+-- Debug: LAPACK_LIBRARIES is /usr/lib64/liblapack.so;/usr/lib64/libblas.so
+-- Debug: SCALAPACK_LIBRARIES is 
+-- Debug: MPI_LIBRARIES is /opt/scidb/14.12/3rdparty/mpich2/lib/libmpichcxx.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libmpich.so;/opt/scidb/14.12/3rdparty/mpich2/lib/libopa.a;/usr/lib64/libpthread.so;/usr/lib64/librt.so
+-- Debug: CMAKE_C_FLAGS is  -pedantic -W -Wextra -Wall -Wno-long-long -Wno-unused-parameter -fPIC -D__STDC_FORMAT_MACROS
+-- Debug: CMAKE_CXX_FLAGS is  -std=c++98 -pedantic -W -Wextra -Wall -Wno-strict-aliasing -Wno-long-long -Wno-unused-parameter -Wno-variadic-macros -fPIC -D__STDC_FORMAT_MACROS -Wno-system-headers -isystem /opt/local/include/ -isystem /usr/local/include/ -D__STDC_LIMIT_MACROS -DPROJECT_ROOT=\"/builddir/build/BUILD/scidb-14.12-0/\"
+-- Debug: CMAKE_Fortran_FLAGS is  -fno-f2c -Wline-truncation -I/opt/scidb/14.12/3rdparty/mpich2/include/mpi -I/opt/scidb/14.12/3rdparty/boost/include/boost 
+-- Debug: MPI_Fortran_COMPILER is /opt/scidb/14.12/3rdparty/mpich2/bin/mpif77
+-- *****END linear_algebra/CMakeLists.txt ***********************
+-- **BEGIN linear_algebra/CMakeLists.txt --------------------------------
+-- Debug: CMAKE_C_FLAGS is  -pedantic -W -Wextra -Wall -Wno-long-long -Wno-unused-parameter -fPIC -D__STDC_FORMAT_MACROS
+-- Debug: CMAKE_CXX_FLAGS is  -std=c++98 -pedantic -W -Wextra -Wall -Wno-strict-aliasing -Wno-long-long -Wno-unused-parameter -Wno-variadic-macros -fPIC -D__STDC_FORMAT_MACROS -Wno-system-headers -isystem /opt/local/include/ -isystem /usr/local/include/ -D__STDC_LIMIT_MACROS -DPROJECT_ROOT=\"/builddir/build/BUILD/scidb-14.12-0/\"
+-- **END linear_algebra/CMakeLists.txt --------------------------------
+-- Found Java6: /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/java  
+-- ****************** END src/CMakeLists.txt ******************
+-- Configuring /builddir/build/BUILD/scidb-14.12-0/doc/api/Doxyfile.in as /builddir/build/BUILD/scidb-14.12-0/doc/api/Doxyfile
+-- API documentation will be generated automatically. Use -DSCIDB_DOC_TYPE={NONE,FULL,API} to set type of generated documentation.
+-- copying /builddir/build/BUILD/scidb-14.12-0/cdash to /builddir/build/BUILD/scidb-14.12-0/cdash
+-- copying /builddir/build/BUILD/scidb-14.12-0/tests to /builddir/build/BUILD/scidb-14.12-0/tests
+-- copying /builddir/build/BUILD/scidb-14.12-0/tests/harness/testcases/t to /builddir/build/BUILD/scidb-14.12-0/tests/harness/testcases/t
+-- ****************** END CMakeLists.txt ******************
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /builddir/build/BUILD/scidb-14.12-0
++ make -j4
+[  0%] Running protocol buffer compiler on /builddir/build/BUILD/scidb-14.12-0/src/network/proto/scidb_msg.proto
+Scanning dependencies of target genmeta
+Scanning dependencies of target MurmurHash_lib
+Scanning dependencies of target json_lib
+[  0%] [  0%] [  0%] Scanning dependencies of target scidb_msg_lib
+Generating CatalogMetadata.h
+Building CXX object extern/MurmurHash/CMakeFiles/MurmurHash_lib.dir/MurmurHash3.cpp.o
+Building CXX object extern/lib_json/CMakeFiles/json_lib.dir/json_reader.cpp.o
+[  1%] Building CXX object src/network/proto/CMakeFiles/scidb_msg_lib.dir/scidb_msg.pb.cc.o
+[  1%] Built target genmeta
+Scanning dependencies of target dmalloc
+[  1%] Linking CXX static library libMurmurHash_lib.a
+Building CXX object src/util/dmalloc/CMakeFiles/dmalloc.dir/dmalloc.cpp.o
+[  1%] Built target MurmurHash_lib
+Scanning dependencies of target scalapackForMPICH2
+[  1%] Creating directories for 'scalapackForMPICH2'
+Linking CXX shared library ../../../bin/libdmalloc.so
+[  1%] Built target dmalloc
+[  1%] Performing download step (download, verify and extract) for 'scalapackForMPICH2'
+-- downloading...
+     src='http://www.netlib.org/scalapack/scalapack_installer.tgz'
+     dst='/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapack_installer.tgz'
+     timeout='120 seconds'
+-- [download 7% complete]
+-- [download 23% complete]
+-- [download 38% complete]
+-- [download 54% complete]
+-- [download 70% complete]
+-- [download 78% complete]
+Scanning dependencies of target linear_algebra
+-- [download 100% complete]
+-- downloading... done
+-- verifying file...
+     file='/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapack_installer.tgz'
+-- verifying file... warning: did not verify file - no URL_HASH specified?
+-- extracting...
+     src='/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapack_installer.tgz'
+     dst='/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[  1%] Building CXX object src/linear_algebra/CMakeFiles/linear_algebra.dir/plugin.cpp.o
+[  1%] Performing patch step for 'scalapackForMPICH2'
+[  2%] No update step for 'scalapackForMPICH2'
+[  2%] No configure step for 'scalapackForMPICH2'
+[  2%] Performing build step for 'scalapackForMPICH2'
+SETUP_DIR is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2
+PATCH is /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/scalapack.patch
+ARGS#: 4
+ARG1: -I /opt/scidb/14.12/3rdparty/mpich2/include/mpich2
+ARG2: /opt/scidb/14.12/3rdparty/mpich2/bin
+ARG3: /usr/lib64/liblapack.so /usr/lib64/libblas.so
+ARG4: /usr/lib64/libblas.so
+ARG5: 
+patching file script/framework.py
+patching file script/utils.py
+patching file script/scalapack.py
+========================================
+Setting up the framework
+ScaLAPACK installer version (1, 0, 2)
+MPI bin dir is  /opt/scidb/14.12/3rdparty/mpich2/bin
+mpirun is  /opt/scidb/14.12/3rdparty/mpich2/bin/mpiexec.hydra
+mpicc is  /opt/scidb/14.12/3rdparty/mpich2/bin/mpicc
+mpif90 is  /opt/scidb/14.12/3rdparty/mpich2/bin/mpif90
+MPI include dir is  -I /opt/scidb/14.12/3rdparty/mpich2/include/mpich2 
+NOOPT flags are  -fPIC -g -O0
+Creating directory /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install
+Install directory is... /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install
+Creating directory /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build
+Build directory is... /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build
+Checking if mpicc works... yes
+Checking if mpirun works... yes
+Checking if mpif90 works... yes
+Setting Fortran mangling... -DAdd_
+Setting download command...
+Checking availability of urllib... available
+Testing urllib... working
+Setting ranlib command... /usr/bin/ranlib
+Detecting Fortran compiler... unknown
+Detecting C compiler... unknown
+C flags are...  -O2
+Fortran flags are...  -O2
+Selected loader flags (C main): 
+Selected loader flags (f90 main): 
+Selected NOOPT flags: -fPIC -g -O0
+AR flags are...  rc
+Checking loader...[  2%] Building CXX object extern/lib_json/CMakeFiles/json_lib.dir/json_writer.cpp.o
+[  3%] Building CXX object extern/lib_json/CMakeFiles/json_lib.dir/json_value.cpp.o
+Linking CXX static library libjson_lib.a
+[  3%] Built target json_lib
+Scanning dependencies of target jdbc_build
+[  3%] Generating ../../bin/jdbc/jdbctest.jar, ../../bin/jdbc/jiquery.jar, ../../bin/jdbc/scidb4j.jar, ../../bin/jdbc/example.jar, ../../bin/jdbc/scidb-example.war
+cp: `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/example' and `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/example' are the same file
+cp: `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/jdbctest' and `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/jdbctest' are the same file
+cp: `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/jiquery' and `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/jiquery' are the same file
+cp: `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/scidb4j' and `/builddir/build/BUILD/scidb-14.12-0/src/jdbc/scidb4j' are the same file
+Buildfile: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build.xml
+[  3%] Linking CXX static library libscidb_msg_lib.a
+Building CXX object src/linear_algebra/CMakeFiles/linear_algebra.dir/spgemm/LogicalSpgemm.cpp.o
+[  3%] Built target scidb_msg_lib
+Scanning dependencies of target benchGen
+ works
+========================================
+ScaLAPACK installer is starting now. Buckle up!
+========================================
+Downloading ScaLAPACK... Creating directory /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build/download
+done
+Installing  scalapack-2.0.2 ...
+Writing SLmake.inc... done.
+Patching pxerbla.f
+Compiling BLACS, PBLAS and ScaLAPACK...[  3%] Building CXX object utils/CMakeFiles/benchGen.dir/benchGen.cc.o
+configure:
+[propertyfile] Creating new property file: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/configure.properties
+     [echo] build_dir is set to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build
+     [echo] dist_dir is set to /builddir/build/BUILD/scidb-14.12-0/bin/jdbc
+     [echo] deps_dir is set to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/deps
+     [echo] report_dir is set to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/report
+     [echo] doc_dir is set to 
+     [echo] junit_lib is set to /usr/share/java/junit.jar
+     [echo] protobuf_lib is set to /usr/share/java/protobuf.jar
+     [echo] java.version is set to 1.6.0_33
+     [echo] java.runtime.version is set to 1.6.0_33-b33
+     [echo] debug is set to off
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build.xml
+init:
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/scidb4j
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/jiquery
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/jdbctest
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/example
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/test
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/report
+Trying to override old definition of task javac
+gen.protocol:
+     [echo] Compiling scidb_msg.proto
+build.scidb4j:
+Linking CXX executable ../bin/benchGen
+    [javac] Compiling 25 source files to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/scidb4j
+[  3%] Built target benchGen
+Scanning dependencies of target osplitcsv
+[  3%] Building C object utils/CMakeFiles/osplitcsv.dir/splitcsv.c.o
+Linking C executable ../bin/osplitcsv
+[  3%] Built target osplitcsv
+Scanning dependencies of target shimsvc
+[  3%] Built target shimsvc
+Scanning dependencies of target dgenerator
+[  3%] Building CXX object tests/data_gen/CMakeFiles/dgenerator.dir/dgenerator.cpp.o
+Linking CXX executable dgenerator
+[  3%] Built target dgenerator
+Scanning dependencies of target gen_matrix
+[  3%] Building CXX object tests/data_gen/CMakeFiles/gen_matrix.dir/gen_matrix.cpp.o
+Linking CXX executable ../../bin/gen_matrix
+[  3%] Built target gen_matrix
+Scanning dependencies of target arg_separator
+[  3%] Building CXX object tests/harness/CMakeFiles/arg_separator.dir/src/arg_separator.cc.o
+Linking CXX executable ../../bin/arg_separator
+[  3%] Built target arg_separator
+Scanning dependencies of target preparecdashreport
+[  3%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/helper.cpp.o
+      [jar] Building jar: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/scidb4j.jar
+build.jiquery:
+    [javac] Compiling 1 source file to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/jiquery
+      [jar] Building jar: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/jiquery.jar
+build.jdbctest:
+    [javac] Compiling 2 source files to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/jdbctest
+      [jar] Building jar: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/jdbctest.jar
+build.example:
+    [javac] Compiling 1 source file to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/build/example
+      [jar] Building jar: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/example.jar
+war:
+    [mkdir] Created dir: /builddir/build/BUILD/scidb-14.12-0/src/jdbc/jsp/scidb-example/WEB-INF/lib
+     [copy] Copying 1 file to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/jsp/scidb-example/WEB-INF/lib
+     [copy] Copying /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/scidb4j.jar to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/jsp/scidb-example/WEB-INF/lib/scidb4j.jar
+     [copy] Copying 1 file to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/jsp/scidb-example/WEB-INF/lib
+     [copy] Copying /usr/share/java/protobuf.jar to /builddir/build/BUILD/scidb-14.12-0/src/jdbc/jsp/scidb-example/WEB-INF/lib/protobuf.jar
+      [war] Building war: /builddir/build/BUILD/scidb-14.12-0/bin/jdbc/scidb-example.war
+all:
+BUILD SUCCESSFUL
+Total time: 5 seconds
+[  3%] Built target jdbc_build
+Scanning dependencies of target point
+[  3%] Building CXX object examples/point/CMakeFiles/point.dir/point.cpp.o
+[  3%] Building CXX object src/linear_algebra/CMakeFiles/linear_algebra.dir/spgemm/PhysicalSpgemm.cpp.o
+[  4%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/errdb.cpp.o
+[  4%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/Exceptions.cpp.o
+[  4%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/xmlarchive.cpp.o
+Linking CXX shared library ../../bin/plugins/libpoint.so
+[  4%] Built target point
+Scanning dependencies of target rational
+[  4%] [  4%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/reporter.cpp.o
+Building CXX object examples/rational/CMakeFiles/rational.dir/rational.cpp.o
+[  4%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/cdashreportstructs.cpp.o
+[  5%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/cdashreportapp.cpp.o
+[  5%] Building CXX object tests/harness/CMakeFiles/preparecdashreport.dir/src/preparecdashreport.cpp.o
+Linking CXX executable preparecdashreport
+[  5%] Built target preparecdashreport
+Scanning dependencies of target complex
+[  6%] Building CXX object examples/complex/CMakeFiles/complex.dir/complex.cpp.o
+Linking CXX shared library ../../bin/plugins/librational.so
+[  6%] Built target rational
+Scanning dependencies of target ra_decl
+[  6%] Building CXX object examples/ra_decl/CMakeFiles/ra_decl.dir/ra_decl.cpp.o
+[  6%] Building CXX object src/linear_algebra/CMakeFiles/linear_algebra.dir/stats/HypergeometricFunctions.cpp.o
+Linking CXX shared library ../../bin/plugins/libcomplex.so
+[  6%] Built target complex
+Scanning dependencies of target more_math
+[  7%] Building CXX object examples/more_math/CMakeFiles/more_math.dir/more_math.cpp.o
+Linking CXX shared library ../../bin/plugins/libra_decl.so
+[  7%] Built target ra_decl
+Linking CXX shared library ../../bin/plugins/libmore_math.so
+Scanning dependencies of target misc
+[  7%] Built target more_math
+[  7%] Building CXX object examples/misc/CMakeFiles/misc.dir/misc.cpp.o
+Scanning dependencies of target match
+[  8%] Building CXX object examples/match/CMakeFiles/match.dir/plugin.cpp.o
+Linking CXX shared library ../../bin/plugins/liblinear_algebra.so
+[  8%] Building CXX object examples/match/CMakeFiles/match.dir/MatchArray.cpp.o
+[  8%] Built target linear_algebra
+Scanning dependencies of target bestmatch
+[  9%] Building CXX object examples/bestmatch/CMakeFiles/bestmatch.dir/plugin.cpp.o
+[  9%] Building CXX object examples/bestmatch/CMakeFiles/bestmatch.dir/BestMatchArray.cpp.o
+[  9%] Building CXX object examples/match/CMakeFiles/match.dir/LogicalMatch.cpp.o
+[ 10%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/LogicalTestCache.cpp.o
+[ 10%] Building CXX object examples/bestmatch/CMakeFiles/bestmatch.dir/LogicalBestMatch.cpp.o
+[ 10%] Building CXX object examples/match/CMakeFiles/match.dir/PhysicalMatch.cpp.o
+[ 10%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/PhysicalTestCache.cpp.o
+[ 10%] Building CXX object examples/bestmatch/CMakeFiles/bestmatch.dir/PhysicalBestMatch.cpp.o
+Linking CXX shared library ../../bin/plugins/libmatch.so
+[ 10%] Built target match
+Scanning dependencies of target savebmp
+[ 10%] Building CXX object examples/savebmp/CMakeFiles/savebmp.dir/plugin.cpp.o
+[ 10%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestDeepChunkMergeLogical.cpp.o
+[ 10%] Building CXX object examples/savebmp/CMakeFiles/savebmp.dir/LogicalSaveBmp.cpp.o
+Linking CXX shared library ../../bin/plugins/libbestmatch.so
+[ 10%] Built target bestmatch
+Scanning dependencies of target operators
+[ 10%] Building CXX object examples/operators/CMakeFiles/operators.dir/plugin.cpp.o
+[ 10%] Building CXX object examples/operators/CMakeFiles/operators.dir/LogicalStub.cpp.o
+[ 10%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestDeepChunkMergePhysical.cpp.o
+[ 11%] Building CXX object examples/savebmp/CMakeFiles/savebmp.dir/PhysicalSaveBmp.cpp.o
+[ 11%] Building CXX object examples/operators/CMakeFiles/operators.dir/PhysicalStub.cpp.o
+[ 11%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestSortArrayLogical.cpp.o
+Linking CXX shared library ../../bin/plugins/libsavebmp.so
+[ 11%] Built target savebmp
+Scanning dependencies of target fits
+[ 11%] Building CXX object examples/fits/CMakeFiles/fits.dir/plugin.cpp.o
+Linking CXX shared library ../../bin/plugins/liboperators.so
+[ 11%] Built target operators
+Scanning dependencies of target example_udos
+[ 11%] Building CXX object examples/example_udos/CMakeFiles/example_udos.dir/plugin.cpp.o
+[ 12%] Building CXX object examples/fits/CMakeFiles/fits.dir/common/FITSParser.cpp.o
+[ 13%] Building CXX object examples/example_udos/CMakeFiles/example_udos.dir/HelloInstances/LogicalHelloInstances.cpp.o
+[ 14%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestSortArrayPhysical.cpp.o
+[ 14%] Building CXX object examples/fits/CMakeFiles/fits.dir/input/FITSInputArray.cpp.o
+[ 14%] Building CXX object examples/example_udos/CMakeFiles/example_udos.dir/HelloInstances/PhysicalHelloInstances.cpp.o
+[ 14%] Building CXX object examples/fits/CMakeFiles/fits.dir/input/LogicalFITSInput.cpp.o
+[ 14%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/util/UnitTestFileIOLogical.cpp.o
+[ 14%] Building CXX object examples/example_udos/CMakeFiles/example_udos.dir/InstanceStats/LogicalInstanceStats.cpp.o
+[ 14%] Building CXX object examples/fits/CMakeFiles/fits.dir/input/PhysicalFITSInput.cpp.o
+[ 14%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/util/UnitTestFileIOPhysical.cpp.o
+[ 14%] Building CXX object examples/example_udos/CMakeFiles/example_udos.dir/InstanceStats/PhysicalInstanceStats.cpp.o
+[ 14%] Building CXX object examples/fits/CMakeFiles/fits.dir/show/LogicalFITSShow.cpp.o
+[ 14%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/util/UnitTestDataStoreLogical.cpp.o
+Linking CXX shared library ../../bin/plugins/libexample_udos.so
+[ 14%] Built target example_udos
+Scanning dependencies of target tile_integration
+[ 14%] Building CXX object examples/tile_integration/CMakeFiles/tile_integration.dir/plugin.cpp.o
+[ 15%] Building CXX object examples/fits/CMakeFiles/fits.dir/show/PhysicalFITSShow.cpp.o
+[ 15%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/util/UnitTestDataStorePhysical.cpp.o
+[ 15%] Building CXX object examples/tile_integration/CMakeFiles/tile_integration.dir/TileApplyArray.cpp.o
+Linking CXX shared library ../../bin/plugins/libfits.so
+[ 15%] Built target fits
+[ 16%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestChunkLimitLogical.cpp.o
+[ 16%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestChunkLimitPhysical.cpp.o
+[ 16%] Building CXX object examples/tile_integration/CMakeFiles/tile_integration.dir/LogicalTileApply.cpp.o
+[ 16%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestMemArrayLogical.cpp.o
+[ 16%] Building CXX object examples/tile_integration/CMakeFiles/tile_integration.dir/PhysicalTileApply.cpp.o
+[ 16%] Building CXX object examples/misc/CMakeFiles/misc.dir/__/__/src/array/UnitTestMemArrayPhysical.cpp.o
+Scanning dependencies of target util_lib
+[ 16%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/Arena.cpp.o
+[ 16%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ArenaCheckpoint.cpp.o
+[ 17%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ArenaDetails.cpp.o
+Linking CXX shared library ../../bin/plugins/libtile_integration.so
+[ 17%] [ 17%] Built target tile_integration
+Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ArenaHeader.cpp.o
+Scanning dependencies of target system_lib
+[ 18%] Building CXX object src/system/CMakeFiles/system_lib.dir/System.cpp.o
+[ 18%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ArenaMonitor.cpp.o
+Linking CXX shared library ../../bin/plugins/libmisc.so
+[ 18%] Built target misc
+[ 18%] Building CXX object src/system/CMakeFiles/system_lib.dir/Config.cpp.o
+[ 18%] Building CXX object src/system/CMakeFiles/system_lib.dir/Exceptions.cpp.o
+[ 18%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ArenaOptions.cpp.o
+[ 18%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/RootArena.cpp.o
+[ 19%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/LimitedArena.cpp.o
+[ 19%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ScopedArena.cpp.o
+[ 19%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/LeaArena.cpp.o
+[ 19%] Building CXX object src/system/CMakeFiles/system_lib.dir/Cluster.cpp.o
+[ 19%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/DebugArena.cpp.o
+[ 19%] Building CXX object src/util/CMakeFiles/util_lib.dir/arena/ThreadedArena.cpp.o
+[ 20%] Building CXX object src/util/CMakeFiles/util_lib.dir/isnumber.cpp.o
+[ 20%] Building CXX object src/util/CMakeFiles/util_lib.dir/CsvParser.cpp.o
+[ 20%] Building CXX object src/system/CMakeFiles/system_lib.dir/Sysinfo.cpp.o
+[ 20%] Building CXX object src/util/CMakeFiles/util_lib.dir/TsvParser.cpp.o
+[ 20%] Building CXX object src/util/CMakeFiles/util_lib.dir/Job.cpp.o
+[ 21%] Building CXX object src/system/CMakeFiles/system_lib.dir/Constants.cpp.o
+[ 21%] Building CXX object src/system/CMakeFiles/system_lib.dir/SciDBConfigOptions.cpp.o
+[ 21%] Building CXX object src/system/CMakeFiles/system_lib.dir/Resources.cpp.o
+[ 21%] Building CXX object src/util/CMakeFiles/util_lib.dir/JobQueue.cpp.o
+[ 22%] Building CXX object src/util/CMakeFiles/util_lib.dir/Semaphore.cpp.o
+[ 22%] Building CXX object src/util/CMakeFiles/util_lib.dir/Thread.cpp.o
+[ 22%] Building CXX object src/system/CMakeFiles/system_lib.dir/Warnings.cpp.o
+[ 22%] Building CXX object src/system/CMakeFiles/system_lib.dir/ErrorsLibrary.cpp.o
+[ 22%] Building CXX object src/util/CMakeFiles/util_lib.dir/ThreadPool.cpp.o
+[ 23%] Building CXX object src/system/CMakeFiles/system_lib.dir/BlockCyclic.cpp.o
+[ 23%] Building CXX object src/util/CMakeFiles/util_lib.dir/PluginManager.cpp.o
+[ 23%] Building CXX object src/util/CMakeFiles/util_lib.dir/FileIO.cpp.o
+Linking CXX static library libsystem_lib.a
+[ 23%] Built target system_lib
+Scanning dependencies of target compression_lib
+[ 23%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/ByteOutputItr.cpp.o
+[ 23%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/ByteInputItr.cpp.o
+[ 23%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/BitInputItr.cpp.o
+[ 23%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/BitOutputItr.cpp.o
+[ 24%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/Compressor.cpp.o
+[ 24%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/RunLengthEncoding.cpp.o
+[ 24%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/BitmapEncoding.cpp.o
+Scanning dependencies of target csv2scidb
+[ 25%] Building CXX object utils/CMakeFiles/csv2scidb.dir/csv2scidb.cpp.o
+Linking CXX executable ../bin/csv2scidb
+[ 25%] Built target csv2scidb
+[ 25%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/NullSuppression.cpp.o
+[ 26%] Building CXX object src/util/CMakeFiles/util_lib.dir/PluginObjects.cpp.o
+[ 26%] Building CXX object src/smgr/compression/CMakeFiles/compression_lib.dir/DictionaryEncoding.cpp.o
+[ 26%] Building CXX object src/util/CMakeFiles/util_lib.dir/require.cpp.o
+[ 26%] Building CXX object src/util/CMakeFiles/util_lib.dir/InjectedError.cpp.o
+ done
+Getting ScaLAPACK version number...[ 26%] Linking CXX static library libcompression_lib.a
+Building CXX object src/util/CMakeFiles/util_lib.dir/BufferedFileInput.cpp.o
+ 2.0.1
+Installation of ScaLAPACK successful.
+(log is in  /builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build/log/scalog )
+ScaLAPACK is installed. Use it in moderation :-)
+******************************************************
+******************************************************
+ScaLAPACK installation completed.
+Your BLAS library is                     : 
+Your LAPACK library is                   : /usr/lib64/liblapack.so /usr/lib64/libblas.so /usr/lib64/libblas.so 
+Your BLACS/ScaLAPACK library is          : -L/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/install/lib -lscalapack
+Log messages are in the
+/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build/log directory.
+The ScaLAPACK testing programs are in:
+/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build/build/scalapack-2.0.0/TESTING
+The
+/builddir/build/BUILD/scidb-14.12-0/src/mpi/local_scalapack/container/src/scalapackForMPICH2-build/build
+directory contains the source code of the libraries 
+that have been installed. It can be removed at this time.
+          
+******************************************************
+******************************************************
+setup.py exited with 0
+[ 26%] Built target compression_lib
+[ 26%] [ 26%] Building CXX object src/util/CMakeFiles/util_lib.dir/shm/SharedMemoryIpc.cpp.o
+No install step for 'scalapackForMPICH2'
+[ 26%] Completed 'scalapackForMPICH2'
+[ 26%] Built target scalapackForMPICH2
+[ 27%] Building CXX object src/util/CMakeFiles/util_lib.dir/MultiConstIterators.cpp.o
+[ 27%] Building CXX object src/util/CMakeFiles/util_lib.dir/WorkQueue.cpp.o
+[ 27%] Building CXX object src/util/CMakeFiles/util_lib.dir/DataStore.cpp.o
+[ 27%] Building CXX object src/util/CMakeFiles/util_lib.dir/SpatialType.cpp.o
+[ 27%] Building CXX object src/util/CMakeFiles/util_lib.dir/CoordinatesMapper.cpp.o
+[ 28%] Building CXX object src/util/CMakeFiles/util_lib.dir/Counter.cpp.o
+Linking CXX static library libutil_lib.a
+[ 28%] Built target util_lib
+Scanning dependencies of target splitcsv
+[ 28%] Scanning dependencies of target mpi_common
+Building CXX object utils/CMakeFiles/splitcsv.dir/splitcsv.cpp.o
+[ 28%] Building CXX object src/mpi/CMakeFiles/mpi_common.dir/MPIUtils.cpp.o
+Scanning dependencies of target catalog_lib
+[ 28%] Building CXX object src/system/catalog/CMakeFiles/catalog_lib.dir/SystemCatalog.cpp.o
+Scanning dependencies of target scidbclient
+[ 28%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/SciDBRemote.cpp.o
+Linking CXX static library libmpi_common.a
+[ 28%] Built target mpi_common
+Linking CXX executable ../bin/splitcsv
+Scanning dependencies of target tsv2scidb
+[ 29%] Building CXX object utils/CMakeFiles/tsv2scidb.dir/tsv2scidb.cpp.o
+[ 29%] Built target splitcsv
+Scanning dependencies of target mpi
+[ 29%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPIManager.cpp.o
+Linking CXX executable ../bin/tsv2scidb
+[ 29%] Built target tsv2scidb
+Scanning dependencies of target mpi_slave_common
+[ 30%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/scalapackUtil/test/slaving/mpiCopySlave.cpp.o
+[ 30%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/scalapackUtil/test/slaving/mpiRankSlave.cpp.o
+[ 30%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/dlaScaLA/slaving/pdgemmSlave.cpp.o
+[ 30%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/dlaScaLA/slaving/pdgesvdSlave.cpp.o
+[ 30%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/dlaScaLA/slaving/pdgesvdMasterSlave.cpp.o
+[ 31%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/dlaScaLA/slaving/slaveTools.cpp.o
+[ 31%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_common.dir/__/__/dense_linear_algebra/scalapackUtil/reformat.cpp.o
+[ 31%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/network/BaseConnection.cpp.o
+Linking CXX static library libmpi_slave_common.a
+[ 31%] Built target mpi_slave_common
+[ 31%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPILauncher.cpp.o
+[ 31%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPISlaveProxy.cpp.o
+[ 31%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/system/Exceptions.cpp.o
+Linking CXX static library libcatalog_lib.a
+[ 31%] Built target catalog_lib
+[ 31%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPIInitLogical.cpp.o
+[ 32%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPIInitPhysical.cpp.o
+[ 32%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/Metadata.cpp.o
+[ 32%] Building CXX object src/mpi/CMakeFiles/mpi.dir/MPIPhysical.cpp.o
+[ 33%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/system/Constants.cpp.o
+[ 33%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/smgr/io/ArrayWriter.cpp.o
+Scanning dependencies of target array_lib
+[ 33%] Building CXX object src/array/CMakeFiles/array_lib.dir/Metadata.cpp.o
+[ 33%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/smgr/io/TemplateParser.cpp.o
+[ 33%] Building CXX object src/mpi/CMakeFiles/mpi.dir/test/MPITestLogical.cpp.o
+[ 33%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/Array.cpp.o
+[ 33%] Building CXX object src/mpi/CMakeFiles/mpi.dir/test/MPITestPhysical.cpp.o
+[ 33%] Building CXX object src/array/CMakeFiles/array_lib.dir/Array.cpp.o
+[ 33%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/MemChunk.cpp.o
+[ 34%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/StreamArray.cpp.o
+[ 34%] Building CXX object src/array/CMakeFiles/array_lib.dir/Tile.cpp.o
+[ 34%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/query/TypeSystem.cpp.o
+[ 34%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/query/FunctionLibrary.cpp.o
+Linking CXX shared library ../../bin/plugins/libmpi.so
+[ 34%] Built target mpi
+[ 35%] Building CXX object src/array/CMakeFiles/array_lib.dir/MemArray.cpp.o
+Scanning dependencies of target dense_linear_algebra
+[ 35%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/plugin.cpp.o
+[ 35%] Building CXX object src/array/CMakeFiles/array_lib.dir/MemChunk.cpp.o
+[ 35%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/numroc.f.o
+[ 35%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/descinit.f.o
+[ 35%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/lsame.f.o
+[ 36%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/pdelset.f.o
+[ 36%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/pdelget.f.o
+[ 36%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/infog2l.f.o
+[ 36%] Building Fortran object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/pxerbla.f.o
+[ 36%] Building C object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/scalapackEmulation/blacs_info_fake.c.o
+[ 37%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/reformat.cpp.o
+[ 37%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/MPICopyLogical.cpp.o
+[ 37%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/MPICopyPhysical.cpp.o
+[ 37%] Building CXX object src/array/CMakeFiles/array_lib.dir/StreamArray.cpp.o
+[ 37%] Building CXX object src/array/CMakeFiles/array_lib.dir/DelegateArray.cpp.o
+[ 37%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/slaving/mpiCopyMaster.cpp.o
+[ 37%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/util/PluginManager.cpp.o
+[ 37%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/MPIRankLogical.cpp.o
+[ 37%] Building CXX object src/array/CMakeFiles/array_lib.dir/TupleArray.cpp.o
+[ 38%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/MPIRankPhysical.cpp.o
+[ 38%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/util/FileIO.cpp.o
+[ 39%] Building CXX object src/array/CMakeFiles/array_lib.dir/DBArray.cpp.o
+[ 40%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/query/Statistics.cpp.o
+[ 40%] Building CXX object src/array/CMakeFiles/array_lib.dir/ParallelAccumulatorArray.cpp.o
+[ 40%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/test/slaving/mpiRankMaster.cpp.o
+[ 40%] Building CXX object src/array/CMakeFiles/array_lib.dir/RLE.cpp.o
+[ 40%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/ScaLAPACKLogical.cpp.o
+[ 40%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/query/FunctionDescription.cpp.o
+[ 40%] Building CXX object src/array/CMakeFiles/array_lib.dir/DeepChunkMerger.cpp.o
+[ 40%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/system/Sysinfo.cpp.o
+[ 40%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/util/Semaphore.cpp.o
+[ 40%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/scalapackUtil/ScaLAPACKPhysical.cpp.o
+[ 40%] Building CXX object src/array/CMakeFiles/array_lib.dir/MergeSortArray.cpp.o
+[ 40%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/util/PluginObjects.cpp.o
+[ 40%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/GEMMLogical.cpp.o
+[ 41%] Building CXX object src/array/CMakeFiles/array_lib.dir/SortArray.cpp.o
+[ 42%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/GEMMPhysical.cpp.o
+[ 42%] Building CXX object src/array/CMakeFiles/array_lib.dir/TransientCache.cpp.o
+[ 42%] Building CXX object src/array/CMakeFiles/array_lib.dir/SpatialRangesChunkPosIterator.cpp.o
+[ 43%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/RLE.cpp.o
+[ 43%] Building CXX object src/array/CMakeFiles/array_lib.dir/Coordinate.cpp.o
+[ 43%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/GEMMOptions.cpp.o
+Linking CXX static library libarray_lib.a
+[ 43%] Built target array_lib
+[ 43%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/system/ErrorsLibrary.cpp.o
+[ 43%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/network/MessageUtils.cpp.o
+[ 43%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/SVDLogical.cpp.o
+[ 43%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/system/Warnings.cpp.o
+[ 43%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/SVDPhysical.cpp.o
+[ 43%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/slaving/pdgemmMaster.cpp.o
+[ 43%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/query/TileFunctions.cpp.o
+[ 44%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/slaving/pdgesvdMaster.cpp.o
+[ 45%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/DeepChunkMerger.cpp.o
+[ 45%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/Tile.cpp.o
+[ 45%] Building CXX object src/dense_linear_algebra/CMakeFiles/dense_linear_algebra.dir/dlaScaLA/slaving/pdgesvdMasterSlave.cpp.o
+Linking CXX shared library ../../bin/plugins/libdense_linear_algebra.so
+[ 45%] Built target dense_linear_algebra
+[ 45%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/array/Coordinate.cpp.o
+[ 45%] Building CXX object src/capi/CMakeFiles/scidbclient.dir/__/util/CoordinatesMapper.cpp.o
+Scanning dependencies of target ops_lib
+/builddir/build/BUILD/scidb-14.12-0/src/query/FunctionLibrary.cpp: In member function 'void scidb::FunctionLibrary::registerBuiltInFunctions()':
+/builddir/build/BUILD/scidb-14.12-0/src/query/FunctionLibrary.cpp:120: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+[ 46%] [ 46%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/create_array/LogicalCreateArray.cpp.o
+Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/create_array/PhysicalCreateArray.cpp.o
+[ 46%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/project/LogicalProject.cpp.o
+Linking CXX shared library ../../bin/libscidbclient.so
+[ 46%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/project/PhysicalProject.cpp.o
+[ 46%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/scan/LogicalScan.cpp.o
+[ 46%] Built target scidbclient
+[ 47%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/scan/PhysicalScan.cpp.o
+[ 47%] Building SWIG source in SWIGWORDSIZE64 mode: See swigpython.out for errors and warning
+[ 47%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/bernoulli/LogicalBernoulli.cpp.o
+Scanning dependencies of target scidbpython
+[ 48%] Building CXX object src/capi/CMakeFiles/scidbpython.dir/scidbpython.cxx.o
+[ 48%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/bernoulli/PhysicalBernoulli.cpp.o
+[ 48%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/bernoulli/NumericOps.cpp.o
+[ 48%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/subarray/SubArray.cpp.o
+/builddir/build/BUILD/scidb-14.12-0/src/capi/scidbpython.cxx: In function 'void SWIG_InitializeModule(void*)':
+/builddir/build/BUILD/scidb-14.12-0/src/capi/scidbpython.cxx:63697: warning: statement has no effect
+[ 49%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/subarray/LogicalSubArray.cpp.o
+[ 49%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/subarray/PhysicalSubArray.cpp.o
+[ 49%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/between/BetweenArray.cpp.o
+[ 49%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/between/LogicalBetween.cpp.o
+[ 49%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/between/PhysicalBetween.cpp.o
+[ 50%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/between/LogicalCrossBetween.cpp.o
+[ 50%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/between/PhysicalCrossBetween.cpp.o
+[ 50%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/filter/FilterArray.cpp.o
+[ 50%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/filter/LogicalFilter.cpp.o
+[ 50%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/filter/PhysicalFilter.cpp.o
+[ 51%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/apply/ApplyArray.cpp.o
+[ 51%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/apply/LogicalApply.cpp.o
+[ 51%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/apply/PhysicalApply.cpp.o
+[ 51%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sg/LogicalSG.cpp.o
+[ 51%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sg/PhysicalSG.cpp.o
+[ 52%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/load/LogicalLoad.cpp.o
+[ 52%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/store/LogicalStore.cpp.o
+[ 52%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/store/PhysicalStore.cpp.o
+[ 52%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/redimension/LogicalRedimension.cpp.o
+[ 52%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/redimension/PhysicalRedimension.cpp.o
+[ 53%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/redimension/RedimensionCommon.cpp.o
+Linking CXX shared library ../../bin/_libscidbpython.so
+[ 53%] Built target scidbpython
+Scanning dependencies of target mpi_slave_direct
+[ 53%] [ 53%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/redimension/SyntheticDimChunkMerger.cpp.o
+Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_direct.dir/mpi_slave_direct.cpp.o
+[ 53%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reshape/LogicalReshape.cpp.o
+[ 53%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_direct.dir/__/__/dense_linear_algebra/blas/initMathLibs.cpp.o
+Linking CXX executable ../../../bin/plugins/mpi_slave_direct
+Scanning dependencies of target mpi_slave_scidb
+[ 53%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_scidb.dir/mpi_slave_scidb.cpp.o
+[ 53%] Built target mpi_slave_direct
+[ 54%] Building FLEX target iquery_scanner (/builddir/build/BUILD/scidb-14.12-0/utils/iquery/scanner.cpp)
+[ 54%] Building BISON target iquery_parser (/builddir/build/BUILD/scidb-14.12-0/utils/iquery/parser.cpp)
+[ 54%] Fixing generated FLEX source. During building file '/builddir/build/BUILD/scidb-14.12-0/utils/iquery/scanner.fixed.cpp' will be used instead '/builddir/build/BUILD/scidb-14.12-0/utils/iquery/scanner.cpp'!
+Scanning dependencies of target iquery
+[ 54%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/iquery.cpp.o
+[ 54%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reshape/PhysicalReshape.cpp.o
+[ 54%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/parser.cpp.o
+[ 55%] Building CXX object src/mpi/slaving/CMakeFiles/mpi_slave_scidb.dir/__/__/dense_linear_algebra/blas/initMathLibs.cpp.o
+[ 55%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/scanner.fixed.cpp.o
+Linking CXX executable ../../../bin/plugins/mpi_slave_scidb
+[ 55%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reshape/ReshapeArray.cpp.o
+[ 55%] Built target mpi_slave_scidb
+Scanning dependencies of target shim
+[ 55%] Creating directories for 'shim'
+[ 55%] Performing download step (git clone) for 'shim'
+[ 55%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/iquery_parser.cpp.o
+Initialized empty Git repository in /builddir/build/BUILD/scidb-14.12-0/utils/shim/github/src/shim/.git/
+[ 56%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/keywords.cpp.o
+[ 57%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reshape/ShiftArray.cpp.o
+[ 57%] Building CXX object utils/iquery/CMakeFiles/iquery.dir/__/__/src/system/Config.cpp.o
+Already on 'master'
+[ 57%] Performing patch step for 'shim'
+[ 58%] No update step for 'shim'
+[ 58%] No configure step for 'shim'
+[ 58%] Performing build step for 'shim'
+make[3]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+[ 58%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/repart/LogicalRepart.cpp.o
+[ 58%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/repart/PhysicalRepart.cpp.o
+[ 58%] Performing install step for 'shim'
+[ 58%] Completed 'shim'
+[ 58%] Built target shim
+Scanning dependencies of target scidbtest
+[ 58%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/helper.cpp.o
+Linking CXX executable ../../bin/iquery
+[ 58%] [ 58%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/load_library/LogicalLoadLibrary.cpp.o
+Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/load_library/PhysicalLoadLibrary.cpp.o
+[ 58%] Built target iquery
+[ 58%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/errdb.cpp.o
+[ 58%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/Exceptions.cpp.o
+[ 58%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/defaultexecutor.cpp.o
+Scanning dependencies of target scidbtestharness
+[ 58%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/helper.cpp.o
+[ 59%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/harnesstestexecutor.cpp.o
+[ 60%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/load_module/LogicalLoadModule.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/errdb.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/Exceptions.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/executorfactory.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/executorfactory.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/defaultexecutor.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/scidbtestcaseexecutor.cpp.o
+[ 61%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/load_module/PhysicalLoadModule.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtest.dir/src/scidbtest.cpp.o
+[ 61%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/harnesstestexecutor.cpp.o
+[ 61%] [ 62%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/LogicalAggregate.cpp.o
+Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/xmlarchive.cpp.o
+Linking CXX executable scidbtest
+[ 62%] Built target scidbtest
+[ 62%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/PhysicalAggregate.cpp.o
+[ 62%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/reporter.cpp.o
+[ 62%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/manager.cpp.o
+[ 62%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/LogicalRegrid.cpp.o
+[ 62%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/suite.cpp.o
+[ 62%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/harness.cpp.o
+[ 63%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/PhysicalRegrid.cpp.o
+[ 64%] Building CXX object tests/harness/CMakeFiles/scidbtestharness.dir/src/main.cpp.o
+[ 64%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/LogicalWindow.cpp.o
+[ 64%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/WindowArray.cpp.o
+[ 64%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/PhysicalWindow.cpp.o
+Linking CXX executable ../../bin/scidbtestharness
+[ 64%] Built target scidbtestharness
+[ 64%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/LogicalCumulate.cpp.o
+[ 65%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/aggregates/PhysicalCumulate.cpp.o
+[ 65%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/join/JoinArray.cpp.o
+[ 65%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/join/LogicalJoin.cpp.o
+[ 65%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/join/PhysicalJoin.cpp.o
+[ 65%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cross_join/CrossJoinArray.cpp.o
+[ 66%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cross_join/LogicalCrossJoin.cpp.o
+[ 66%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cross_join/PhysicalCrossJoin.cpp.o
+[ 66%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/substitute/LogicalSubstitute.cpp.o
+[ 66%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/substitute/PhysicalSubstitute.cpp.o
+[ 66%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/slice/LogicalSlice.cpp.o
+[ 67%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/slice/PhysicalSlice.cpp.o
+[ 67%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/slice/SliceArray.cpp.o
+[ 67%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/LogicalSort.cpp.o
+[ 67%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/PhysicalSort.cpp.o
+[ 67%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/ArrayBreaker.cpp.o
+[ 68%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/DistributedSort.cpp.o
+[ 68%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/LogicalOldSort.cpp.o
+[ 68%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort/PhysicalOldSort.cpp.o
+[ 68%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort2/LogicalSort.cpp.o
+[ 68%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/sort2/PhysicalSort.cpp.o
+[ 69%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/list/ListArrayBuilder.cpp.o
+[ 69%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/list/LogicalList.cpp.o
+[ 69%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/list/PhysicalList.cpp.o
+[ 69%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/attributes/LogicalAttributes.cpp.o
+[ 69%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/attributes/PhysicalAttributes.cpp.o
+[ 70%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/dimensions/LogicalDimensions.cpp.o
+[ 70%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/dimensions/PhysicalDimensions.cpp.o
+[ 70%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rename/LogicalRename.cpp.o
+[ 70%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rename/PhysicalRename.cpp.o
+[ 70%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/concat/LogicalConcat.cpp.o
+[ 71%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/concat/PhysicalConcat.cpp.o
+[ 71%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/concat/ConcatArray.cpp.o
+[ 71%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unpack/LogicalUnpack.cpp.o
+[ 71%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unpack/PhysicalUnpack.cpp.o
+[ 71%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/build/LogicalBuild.cpp.o
+[ 72%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/build/PhysicalBuild.cpp.o
+[ 72%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/build/BuildArray.cpp.o
+[ 72%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/transpose/PhysicalTranspose.cpp.o
+[ 72%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/transpose/LogicalTranspose.cpp.o
+[ 72%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/transpose/TransposeArray.cpp.o
+[ 73%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cast/LogicalCast.cpp.o
+[ 73%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cast/PhysicalCast.cpp.o
+[ 73%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/remove/LogicalRemove.cpp.o
+[ 73%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/remove/PhysicalRemove.cpp.o
+[ 73%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/remove/LogicalRemoveVersions.cpp.o
+[ 74%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/remove/PhysicalRemoveVersions.cpp.o
+[ 74%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/merge/LogicalMerge.cpp.o
+[ 74%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/merge/PhysicalMerge.cpp.o
+[ 74%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/merge/MergeArray.cpp.o
+[ 74%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/normalize/LogicalNormalize.cpp.o
+[ 75%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/normalize/PhysicalNormalize.cpp.o
+[ 75%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/normalize/NormalizeArray.cpp.o
+[ 75%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/save/LogicalSave.cpp.o
+[ 75%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/save/PhysicalSave.cpp.o
+[ 75%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/xgrid/LogicalXgrid.cpp.o
+[ 76%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/xgrid/PhysicalXgrid.cpp.o
+[ 76%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/xgrid/XgridArray.cpp.o
+[ 76%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/thin/LogicalThin.cpp.o
+[ 76%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/thin/PhysicalThin.cpp.o
+[ 76%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/thin/ThinArray.cpp.o
+[ 77%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/help/LogicalHelp.cpp.o
+[ 77%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/help/PhysicalHelp.cpp.o
+[ 77%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/lookup/LogicalLookup.cpp.o
+[ 77%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/lookup/PhysicalLookup.cpp.o
+[ 77%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/lookup/LookupArray.cpp.o
+[ 78%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reverse/LogicalReverse.cpp.o
+[ 78%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reverse/PhysicalReverse.cpp.o
+[ 78%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reverse/ReverseArray.cpp.o
+[ 78%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/input/LogicalInput.cpp.o
+[ 78%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/input/PhysicalInput.cpp.o
+[ 79%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/input/InputArray.cpp.o
+[ 79%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/input/ChunkLoader.cpp.o
+[ 79%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/input/CsvChunkLoader.cpp.o
+[ 79%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/explainPhysical/LogicalExplainPhysical.cpp.o
+[ 79%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/explainPhysical/PhysicalExplainPhysical.cpp.o
+[ 80%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/versions/LogicalVersions.cpp.o
+[ 80%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/versions/PhysicalVersions.cpp.o
+[ 80%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/allversions/LogicalAllVersions.cpp.o
+[ 80%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/allversions/PhysicalAllVersions.cpp.o
+[ 80%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/allversions/AllVersionsArray.cpp.o
+[ 81%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/explainLogical/LogicalExplainLogical.cpp.o
+[ 81%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/explainLogical/PhysicalExplainLogical.cpp.o
+[ 81%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unload_library/LogicalUnLoadLibrary.cpp.o
+[ 81%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unload_library/PhysicalUnLoadLibrary.cpp.o
+[ 81%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/attribute_rename/LogicalAttributeRename.cpp.o
+[ 82%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/attribute_rename/PhysicalAttributeRename.cpp.o
+[ 82%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cancel/LogicalCancel.cpp.o
+[ 82%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/cancel/PhysicalCancel.cpp.o
+[ 82%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/show/LogicalShow.cpp.o
+[ 82%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/show/PhysicalShow.cpp.o
+[ 83%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reduce_distro/LogicalReduceDistro.cpp.o
+[ 83%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/reduce_distro/PhysicalReduceDistro.cpp.o
+[ 83%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/setopt/LogicalSetopt.cpp.o
+[ 83%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/setopt/PhysicalSetopt.cpp.o
+[ 83%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/diskinfo/LogicalDiskInfo.cpp.o
+[ 84%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/diskinfo/PhysicalDiskInfo.cpp.o
+[ 84%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/materialize/LogicalMaterialize.cpp.o
+[ 84%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/materialize/PhysicalMaterialize.cpp.o
+[ 84%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/analyze/LogicalAnalyze.cpp.o
+[ 84%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/analyze/PhysicalAnalyze.cpp.o
+[ 85%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/LogicalRank.cpp.o
+[ 85%] [ 85%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/PhysicalRank.cpp.o
+Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/LogicalQuantile.cpp.o
+[ 85%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/PhysicalQuantile.cpp.o
+[ 85%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/LogicalAverageRank.cpp.o
+[ 86%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/PhysicalAverageRank.cpp.o
+[ 86%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/rankquantile/RankCommon.cpp.o
+[ 86%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unfold/LogicalUnfold.cpp.o
+[ 86%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unfold/PhysicalUnfold.cpp.o
+[ 86%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/unfold/UnfoldArray.cpp.o
+[ 87%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/variable_window/LogicalVariableWindow.cpp.o
+[ 87%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/variable_window/PhysicalVariableWindow.cpp.o
+[ 87%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/insert/LogicalInsert.cpp.o
+[ 87%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/insert/PhysicalInsert.cpp.o
+[ 87%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/test/splitarray/LogicalSplitArrayTest.cpp.o
+[ 88%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/test/splitarray/PhysicalSplitArrayTest.cpp.o
+[ 88%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/consume/LogicalConsume.cpp.o
+[ 88%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/consume/PhysicalConsume.cpp.o
+[ 88%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/uniq/LogicalUniq.cpp.o
+[ 88%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/uniq/PhysicalUniq.cpp.o
+[ 89%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/index_lookup/LogicalIndexLookup.cpp.o
+[ 89%] Building CXX object src/query/ops/CMakeFiles/ops_lib.dir/index_lookup/PhysicalIndexLookup.cpp.o
+Linking CXX static library libops_lib.a
+[ 89%] Built target ops_lib
+Scanning dependencies of target scalar_proc_lib
+[ 90%] [ 90%] [ 90%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/Expression.cpp.o
+Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/FunctionLibrary.cpp.o
+[ 90%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/LogicalExpression.cpp.o
+Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/FunctionDescription.cpp.o
+[ 90%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/TypeSystem.cpp.o
+[ 90%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/BuiltinAggregates.cpp.o
+[ 91%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/TileFunctions.cpp.o
+[ 91%] Building CXX object src/query/CMakeFiles/scalar_proc_lib.dir/Aggregate.cpp.o
+/builddir/build/BUILD/scidb-14.12-0/src/query/FunctionLibrary.cpp: In member function 'void scidb::FunctionLibrary::registerBuiltInFunctions()':
+/builddir/build/BUILD/scidb-14.12-0/src/query/FunctionLibrary.cpp:120: note: variable tracking size limit exceeded with -fvar-tracking-assignments, retrying without
+Linking CXX static library libscalar_proc_lib.a
+[ 91%] Built target scalar_proc_lib
+[ 91%] [ 91%] Building FLEX target Lexer (/builddir/build/BUILD/scidb-14.12-0/src/query/parser/Lexer.cpp)
+Building BISON target Parser (/builddir/build/BUILD/scidb-14.12-0/src/query/parser/Parser.cpp)
+[ 91%] Fixing generated FLEX source file (/builddir/build/BUILD/scidb-14.12-0/src/query/parser/Lexer.fixed.cpp)
+Scanning dependencies of target qproc_lib
+[ 91%] [ 91%] [ 91%] [ 92%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/QueryPlanUtilites.cpp.o
+Building CXX object src/query/CMakeFiles/qproc_lib.dir/optimizer/HabilisOptimizer.cpp.o
+Building CXX object src/query/CMakeFiles/qproc_lib.dir/QueryPlan.cpp.o
+Building CXX object src/query/CMakeFiles/qproc_lib.dir/optimizer/Optimizer.cpp.o
+[ 92%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/OperatorLibrary.cpp.o
+[ 93%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/QueryProcessor.cpp.o
+[ 93%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/Query.cpp.o
+[ 93%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/Serialize.cpp.o
+[ 93%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/Statistics.cpp.o
+[ 93%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/executor/SciDBExecutor.cpp.o
+[ 94%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/RemoteArray.cpp.o
+[ 94%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/Operator.cpp.o
+[ 94%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/OperatorProfiling.cpp.o
+[ 94%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/SGChunkReceiver.cpp.o
+[ 94%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/PullSGContext.cpp.o
+[ 95%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/PullSGArray.cpp.o
+[ 95%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Parser.cpp.o
+[ 95%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Node.cpp.o
+[ 95%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Table.cpp.o
+[ 95%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Driver.cpp.o
+[ 96%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Module.cpp.o
+[ 96%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Factory.cpp.o
+[ 96%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Inliner.cpp.o
+[ 96%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Visitor.cpp.o
+[ 96%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Keywords.cpp.o
+[ 97%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Unparser.cpp.o
+[ 97%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Desugarer.cpp.o
+[ 97%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Translator.cpp.o
+[ 97%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/ListMacros.cpp.o
+[ 97%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/ParsingContext.cpp.o
+[ 98%] Building CXX object src/query/CMakeFiles/qproc_lib.dir/parser/Lexer.fixed.cpp.o
+Linking CXX static library libqproc_lib.a
+[ 98%] Built target qproc_lib
+Scanning dependencies of target io_lib
+[ 98%] [ 98%] [ 98%] [ 99%] Building CXX object src/smgr/io/CMakeFiles/io_lib.dir/ArrayWriter.cpp.o
+Building CXX object src/smgr/io/CMakeFiles/io_lib.dir/TemplateParser.cpp.o
+Building CXX object src/smgr/io/CMakeFiles/io_lib.dir/ReplicationManager.cpp.o
+Building CXX object src/smgr/io/CMakeFiles/io_lib.dir/Storage.cpp.o
+[ 99%] Building CXX object src/smgr/io/CMakeFiles/io_lib.dir/PersistentChunk.cpp.o
+Linking CXX static library libio_lib.a
+[ 99%] Built target io_lib
+Scanning dependencies of target network_lib
+[ 99%] [ 99%] [ 99%] [ 99%] Building CXX object src/network/CMakeFiles/network_lib.dir/NetworkManager.cpp.o
+Building CXX object src/network/CMakeFiles/network_lib.dir/BaseConnection.cpp.o
+Building CXX object src/network/CMakeFiles/network_lib.dir/Connection.cpp.o
+Building CXX object src/network/CMakeFiles/network_lib.dir/MessageHandleJob.cpp.o
+[100%] Building CXX object src/network/CMakeFiles/network_lib.dir/ClientMessageHandleJob.cpp.o
+[100%] Building CXX object src/network/CMakeFiles/network_lib.dir/MessageUtils.cpp.o
+Linking CXX static library libnetwork_lib.a
+[100%] Built target network_lib
+Scanning dependencies of target scidb
+[100%] [100%] Building CXX object src/CMakeFiles/scidb.dir/network/entry.cpp.o
+Building CXX object src/CMakeFiles/scidb.dir/dense_linear_algebra/blas/initMathLibs.cpp.o
+Scanning dependencies of target unit_tests
+[100%] Building CXX object tests/unit/CMakeFiles/unit_tests.dir/unit_tests.cpp.o
+Linking CXX executable ../bin/scidb
+/usr/bin/c++    -std=c++98 -pedantic -W -Wextra -Wall -Wno-strict-aliasing -Wno-long-long -Wno-unused-parameter -Wno-variadic-macros -fPIC -D__STDC_FORMAT_MACROS -Wno-system-headers -isystem /opt/local/include/ -isystem /usr/local/include/ -D__STDC_LIMIT_MACROS -DPROJECT_ROOT=\"/builddir/build/BUILD/scidb-14.12-0/\" -DNDEBUG -O3 -fno-omit-frame-pointer -g -ggdb3  -Wl,--enable-new-dtags CMakeFiles/scidb.dir/network/entry.cpp.o CMakeFiles/scidb.dir/dense_linear_algebra/blas/initMathLibs.cpp.o  -o ../bin/scidb -rdynamic network/libnetwork_lib.a util/libutil_lib.a system/libsystem_lib.a query/libqproc_lib.a array/libarray_lib.a -lrt -lpthread -ldl -lblas -llapack -lblas smgr/io/libio_lib.a query/libscalar_proc_lib.a query/ops/libops_lib.a network/libnetwork_lib.a query/libqproc_lib.a smgr/io/libio_lib.a query/libscalar_proc_lib.a query/ops/libops_lib.a network/proto/libscidb_msg_lib.a -lprotobuf array/libarray_lib.a system/catalog/libcatalog_lib.a -lpqxx -lpq util/libutil_lib.a -lrt smgr/compression/libcompression_lib.a system/libsystem_lib.a -llog4cxx ../extern/lib_json/libjson_lib.a /opt/scidb/14.12/3rdparty/boost/lib/libboost_system.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_program_options.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_serialization.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_regex.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_filesystem.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_thread.so /opt/scidb/14.12/3rdparty/boost/lib/libboost_date_time.so -lz -lbz2 -lcsv ../extern/MurmurHash/libMurmurHash_lib.a -llapack -Wl,-rpath,"\$ORIGIN/../plugins:\$ORIGIN/../lib:\$ORIGIN/../../:/opt/scidb/14.12/3rdparty/boost/lib" 
+[100%] Built target scidb
+Linking CXX executable unit_tests
+[100%] Built target unit_tests
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.D5cWeG
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64
+++ dirname /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64
++ cd scidb-14.12-0
++ LANG=C
++ export LANG
++ unset DISPLAY
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb
+++ grep CMAKE_INSTALL_PREFIX CMakeCache.txt
+++ sed 's/.*=//'
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-dbg -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo libscidbclient-14.12
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=libscidbclient
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=libscidbclient -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ sort
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo libscidbclient-14.12-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=libscidbclient-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=libscidbclient-dbg -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ uniq
++ sort
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-utils
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-utils
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-utils -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ uniq
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ sort
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-utils-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-utils-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-utils-dbg -P cmake_install.cmake
++ tail -n+2
++ uniq
++ awk '{print $3}'
++ sort
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-dev-tools
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-dev-tools
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-dev-tools -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-dev-tools-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-dev-tools-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-dev-tools-dbg -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ sort
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-plugins
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-plugins
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-plugins -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ sort
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-plugins-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-plugins-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-plugins-dbg -P cmake_install.cmake
++ tail -n+2
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ uniq
++ awk '{print $3}'
++ sort
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo libscidbclient-14.12-python
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=libscidbclient-python
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=libscidbclient-python -P cmake_install.cmake
++ tail -n+2
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ sort
++ awk '{print $3}'
++ uniq
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo libscidbclient-14.12-python-dbg
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=libscidbclient-python-dbg
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=libscidbclient-python-dbg -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ uniq
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-dev
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-dev
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-dev -P cmake_install.cmake
++ tail -n+2
++ uniq
++ awk '{print $3}'
++ sort
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-doc
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-doc
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-doc -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ uniq
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ for p in scidb-14.12 scidb-14.12-dbg libscidbclient-14.12 libscidbclient-14.12-dbg scidb-14.12-utils scidb-14.12-utils-dbg scidb-14.12-dev-tools scidb-14.12-dev-tools-dbg scidb-14.12-plugins scidb-14.12-plugins-dbg libscidbclient-14.12-python libscidbclient-14.12-python-dbg scidb-14.12-dev scidb-14.12-doc scidb-14.12-jdbc
+++ echo scidb-14.12-jdbc
+++ sed -e s/scidb-14.12/scidb/
+++ sed -e s/libscidbclient-14.12/libscidbclient/
++ COMPONENT=scidb-jdbc
++ scidb_install_prefix=/opt/scidb/14.12
++ cmake -DCMAKE_INSTALL_PREFIX=/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64//opt/scidb/14.12 -DCMAKE_INSTALL_COMPONENT=scidb-jdbc -P cmake_install.cmake
++ tail -n+2
++ awk '{print $3}'
++ sort
++ uniq
++ sed 's|/builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64/||'
++ /usr/lib/rpm/check-buildroot
+Processing files: scidb-14.12-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /usr/sbin/update-alternatives
+Requires(postun): /usr/sbin/update-alternatives
+Requires: /bin/bash /bin/sh /usr/bin/python ld-linux-x86-64.so.2()(64bit) ld-linux-x86-64.so.2(GLIBC_2.3)(64bit) libblas.so.3()(64bit) libboost_date_time.so.1.54.0()(64bit) libboost_filesystem.so.1.54.0()(64bit) libboost_program_options.so.1.54.0()(64bit) libboost_regex.so.1.54.0()(64bit) libboost_serialization.so.1.54.0()(64bit) libboost_system.so.1.54.0()(64bit) libboost_thread.so.1.54.0()(64bit) libbz2.so.1()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.10)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3.2)(64bit) libc.so.6(GLIBC_2.7)(64bit) libc.so.6(GLIBC_2.8)(64bit) libc.so.6(GLIBC_2.9)(64bit) libcsv.so.3()(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgcc_s.so.1(GCC_4.0.0)(64bit) liblapack.so.3()(64bit) liblog4cxx.so.10()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libpq.so.5()(64bit) libpqxx-3.1.so()(64bit) libprotobuf.so.7()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpthread.so.0(GLIBC_2.3.2)(64bit) librt.so.1()(64bit) librt.so.1(GLIBC_2.2.5)(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+Processing files: scidb-14.12-dbg-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: libscidbclient-14.12-0-8690.x86_64
+Provides: libscidbclient.so()(64bit)
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: rtld(GNU_HASH)
+Processing files: libscidbclient-14.12-dbg-0-8690.x86_64
+Provides: libscidbclient.so.debug()(64bit)
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-utils-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: /bin/bash /usr/bin/env /usr/bin/python libboost_date_time.so.1.54.0()(64bit) libboost_filesystem.so.1.54.0()(64bit) libboost_program_options.so.1.54.0()(64bit) libboost_regex.so.1.54.0()(64bit) libboost_serialization.so.1.54.0()(64bit) libboost_system.so.1.54.0()(64bit) libboost_thread.so.1.54.0()(64bit) libbz2.so.1()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libcsv.so.3()(64bit) libdl.so.2()(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgcc_s.so.1(GCC_4.0.0)(64bit) liblog4cxx.so.10()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libprotobuf.so.7()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libreadline.so.6()(64bit) librt.so.1()(64bit) libscidbclient.so()(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+Processing files: scidb-14.12-utils-dbg-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-dev-tools-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: /bin/bash /usr/bin/env /usr/bin/python ld-linux-x86-64.so.2()(64bit) ld-linux-x86-64.so.2(GLIBC_2.3)(64bit) libboost_date_time.so.1.54.0()(64bit) libboost_filesystem.so.1.54.0()(64bit) libboost_program_options.so.1.54.0()(64bit) libboost_regex.so.1.54.0()(64bit) libboost_serialization.so.1.54.0()(64bit) libboost_system.so.1.54.0()(64bit) libboost_thread.so.1.54.0()(64bit) libbz2.so.1()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.10)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.2)(64bit) libc.so.6(GLIBC_2.7)(64bit) libc.so.6(GLIBC_2.8)(64bit) libc.so.6(GLIBC_2.9)(64bit) libcppunit-1.12.so.1()(64bit) libcsv.so.3()(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgcc_s.so.1(GCC_4.0.0)(64bit) libgomp.so.1()(64bit) libgomp.so.1(OMP_3.0)(64bit) liblog4cxx.so.10()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libpam.so.0()(64bit) libpam.so.0(LIBPAM_1.0)(64bit) libpq.so.5()(64bit) libpqxx-3.1.so()(64bit) libprotobuf.so.7()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpthread.so.0(GLIBC_2.3.2)(64bit) librt.so.1()(64bit) librt.so.1(GLIBC_2.2.5)(64bit) libscidbclient.so()(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(CXXABI_1.3.1)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+Processing files: scidb-14.12-dev-tools-dbg-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-plugins-0-8690.x86_64
+Provides: libbestmatch.so()(64bit) libcomplex.so()(64bit) libdense_linear_algebra.so()(64bit) libexample_udos.so()(64bit) libfits.so()(64bit) liblinear_algebra.so()(64bit) libmatch.so()(64bit) libmisc.so()(64bit) libmore_math.so()(64bit) libmpi.so()(64bit) libpoint.so()(64bit) libra_decl.so()(64bit) librational.so()(64bit) libtile_integration.so()(64bit)
+Requires(interp): /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /bin/sh
+Requires(postun): /bin/sh
+Requires: /bin/bash ld-linux-x86-64.so.2()(64bit) ld-linux-x86-64.so.2(GLIBC_2.3)(64bit) libblas.so.3()(64bit) libboost_date_time.so.1.54.0()(64bit) libboost_filesystem.so.1.54.0()(64bit) libboost_program_options.so.1.54.0()(64bit) libboost_regex.so.1.54.0()(64bit) libboost_serialization.so.1.54.0()(64bit) libboost_system.so.1.54.0()(64bit) libboost_thread.so.1.54.0()(64bit) libbz2.so.1()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libcsv.so.3()(64bit) libdl.so.2()(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgfortran.so.3()(64bit) liblapack.so.3()(64bit) liblog4cxx.so.10()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libmpich.so.1.2()(64bit) libmpichcxx.so.1.2()(64bit) libprotobuf.so.7()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) librt.so.1()(64bit) librt.so.1(GLIBC_2.2.5)(64bit) libscidbclient.so()(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+Processing files: scidb-14.12-plugins-dbg-0-8690.x86_64
+Provides: libbestmatch.so.debug()(64bit) libcomplex.so.debug()(64bit) libdense_linear_algebra-scidb.so.debug()(64bit) libfits.so.debug()(64bit) liblinear_algebra-scidb.so.debug()(64bit) libmatch.so.debug()(64bit) libmisc.so.debug()(64bit) libmore_math.so.debug()(64bit) libmpi.so.debug()(64bit) libpoint.so.debug()(64bit) libra_decl.so.debug()(64bit) librational.so.debug()(64bit) libtile_integration.so.debug()(64bit)
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: libscidbclient-14.12-python-0-8690.x86_64
+Provides: _libscidbpython.so()(64bit)
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: rtld(GNU_HASH)
+Processing files: libscidbclient-14.12-python-dbg-0-8690.x86_64
+Processing files: scidb-14.12-dev-0-8690.x86_64
+warning: File listed twice: /opt/scidb/14.12/include/SciDBAPI.h
+warning: File listed twice: /opt/scidb/14.12/include/array
+warning: File listed twice: /opt/scidb/14.12/include/array/AllocationBuffer.h
+warning: File listed twice: /opt/scidb/14.12/include/array/AllocationBuffer.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Array.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Array.h
+warning: File listed twice: /opt/scidb/14.12/include/array/BitmaskUnitTests.h
+warning: File listed twice: /opt/scidb/14.12/include/array/BitmaskUnitTests.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Compressor.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Compressor.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Coordinate.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Coordinate.h
+warning: File listed twice: /opt/scidb/14.12/include/array/DBArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/DBArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/DelegateArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/DelegateArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MemArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MemArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MemChunk.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MemChunk.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MergeSortArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/MergeSortArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Metadata.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Metadata.h
+warning: File listed twice: /opt/scidb/14.12/include/array/ParallelAccumulatorArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/ParallelAccumulatorArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/ProjectArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/ProjectArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/RLE.h
+warning: File listed twice: /opt/scidb/14.12/include/array/RLE.h
+warning: File listed twice: /opt/scidb/14.12/include/array/RowCollection.cpp
+warning: File listed twice: /opt/scidb/14.12/include/array/RowCollection.cpp
+warning: File listed twice: /opt/scidb/14.12/include/array/RowCollection.h
+warning: File listed twice: /opt/scidb/14.12/include/array/RowCollection.h
+warning: File listed twice: /opt/scidb/14.12/include/array/SortArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/SortArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/SpatialRangesChunkPosIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/array/SpatialRangesChunkPosIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/array/StreamArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/StreamArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Tile.h
+warning: File listed twice: /opt/scidb/14.12/include/array/Tile.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TileInterface.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TileInterface.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TileIteratorAdaptors.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TileIteratorAdaptors.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TransientCache.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TransientCache.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TupleArray.h
+warning: File listed twice: /opt/scidb/14.12/include/array/TupleArray.h
+warning: File listed twice: /opt/scidb/14.12/include/delta
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra/blas
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra/blas
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra/blas/initMathLibs.h
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra/blas/initMathLibs.h
+warning: File listed twice: /opt/scidb/14.12/include/dense_linear_algebra/blas/initMathLibs.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPILauncher.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPILauncher.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIManager.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIManager.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIPhysical.hpp
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIPhysical.hpp
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPISlaveProxy.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPISlaveProxy.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIUtils.h
+warning: File listed twice: /opt/scidb/14.12/include/mpi/MPIUtils.h
+warning: File listed twice: /opt/scidb/14.12/include/query
+warning: File listed twice: /opt/scidb/14.12/include/query/Aggregate.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Aggregate.h
+warning: File listed twice: /opt/scidb/14.12/include/query/AttributeComparator.h
+warning: File listed twice: /opt/scidb/14.12/include/query/AttributeComparator.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Expression.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Expression.h
+warning: File listed twice: /opt/scidb/14.12/include/query/FunctionDescription.h
+warning: File listed twice: /opt/scidb/14.12/include/query/FunctionDescription.h
+warning: File listed twice: /opt/scidb/14.12/include/query/FunctionLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/query/FunctionLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/query/LogicalExpression.h
+warning: File listed twice: /opt/scidb/14.12/include/query/LogicalExpression.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Operator.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Operator.h
+warning: File listed twice: /opt/scidb/14.12/include/query/OperatorLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/query/OperatorLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/query/ParsingContext.h
+warning: File listed twice: /opt/scidb/14.12/include/query/ParsingContext.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Query.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Query.h
+warning: File listed twice: /opt/scidb/14.12/include/query/QueryPlanUtilites.h
+warning: File listed twice: /opt/scidb/14.12/include/query/QueryPlanUtilites.h
+warning: File listed twice: /opt/scidb/14.12/include/query/SGChunkReceiver.h
+warning: File listed twice: /opt/scidb/14.12/include/query/SGChunkReceiver.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Statistics.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Statistics.h
+warning: File listed twice: /opt/scidb/14.12/include/query/TileFunctions.h
+warning: File listed twice: /opt/scidb/14.12/include/query/TileFunctions.h
+warning: File listed twice: /opt/scidb/14.12/include/query/TypeSystem.h
+warning: File listed twice: /opt/scidb/14.12/include/query/TypeSystem.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Value.h
+warning: File listed twice: /opt/scidb/14.12/include/query/Value.h
+warning: File listed twice: /opt/scidb/14.12/include/system
+warning: File listed twice: /opt/scidb/14.12/include/system/BlockCyclic.h
+warning: File listed twice: /opt/scidb/14.12/include/system/BlockCyclic.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Cluster.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Cluster.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Config.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Config.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Constants.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Constants.h
+warning: File listed twice: /opt/scidb/14.12/include/system/ErrorCodes.h
+warning: File listed twice: /opt/scidb/14.12/include/system/ErrorCodes.h
+warning: File listed twice: /opt/scidb/14.12/include/system/ErrorsLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/system/ErrorsLibrary.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Exceptions.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Exceptions.h
+warning: File listed twice: /opt/scidb/14.12/include/system/LongErrors.inc
+warning: File listed twice: /opt/scidb/14.12/include/system/LongErrors.inc
+warning: File listed twice: /opt/scidb/14.12/include/system/Resources.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Resources.h
+warning: File listed twice: /opt/scidb/14.12/include/system/ShortErrors.inc
+warning: File listed twice: /opt/scidb/14.12/include/system/ShortErrors.inc
+warning: File listed twice: /opt/scidb/14.12/include/system/Sysinfo.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Sysinfo.h
+warning: File listed twice: /opt/scidb/14.12/include/system/SystemCatalog.h
+warning: File listed twice: /opt/scidb/14.12/include/system/SystemCatalog.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Utils.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Utils.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Warnings.h
+warning: File listed twice: /opt/scidb/14.12/include/system/Warnings.h
+warning: File listed twice: /opt/scidb/14.12/include/util
+warning: File listed twice: /opt/scidb/14.12/include/util/Algorithm.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Algorithm.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Arena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Arena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ArrayCoordinatesMapper.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ArrayCoordinatesMapper.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Atomic.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Atomic.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Barrier.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Barrier.h
+warning: File listed twice: /opt/scidb/14.12/include/util/BitManip.h
+warning: File listed twice: /opt/scidb/14.12/include/util/BitManip.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CoordinatesMapper.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CoordinatesMapper.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CoordinatesToKey.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CoordinatesToKey.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Counter.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Counter.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CsvParser.h
+warning: File listed twice: /opt/scidb/14.12/include/util/CsvParser.h
+warning: File listed twice: /opt/scidb/14.12/include/util/DataStore.h
+warning: File listed twice: /opt/scidb/14.12/include/util/DataStore.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Event.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Event.h
+warning: File listed twice: /opt/scidb/14.12/include/util/FileIO.h
+warning: File listed twice: /opt/scidb/14.12/include/util/FileIO.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Hashing.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Hashing.h
+warning: File listed twice: /opt/scidb/14.12/include/util/InjectedError.h
+warning: File listed twice: /opt/scidb/14.12/include/util/InjectedError.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Job.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Job.h
+warning: File listed twice: /opt/scidb/14.12/include/util/JobQueue.h
+warning: File listed twice: /opt/scidb/14.12/include/util/JobQueue.h
+warning: File listed twice: /opt/scidb/14.12/include/util/LockManager.h
+warning: File listed twice: /opt/scidb/14.12/include/util/LockManager.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Lru.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Lru.h
+warning: File listed twice: /opt/scidb/14.12/include/util/MallocStats.h
+warning: File listed twice: /opt/scidb/14.12/include/util/MallocStats.h
+warning: File listed twice: /opt/scidb/14.12/include/util/MultiConstIterators.h
+warning: File listed twice: /opt/scidb/14.12/include/util/MultiConstIterators.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Mutex.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Mutex.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Network.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Network.h
+warning: File listed twice: /opt/scidb/14.12/include/util/NetworkMessage.h
+warning: File listed twice: /opt/scidb/14.12/include/util/NetworkMessage.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Notification.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Notification.h
+warning: File listed twice: /opt/scidb/14.12/include/util/OverlappingChunksIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/OverlappingChunksIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Platform.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Platform.h
+warning: File listed twice: /opt/scidb/14.12/include/util/PluginObjects.h
+warning: File listed twice: /opt/scidb/14.12/include/util/PluginObjects.h
+warning: File listed twice: /opt/scidb/14.12/include/util/PointerRange.h
+warning: File listed twice: /opt/scidb/14.12/include/util/PointerRange.h
+warning: File listed twice: /opt/scidb/14.12/include/util/RWLock.h
+warning: File listed twice: /opt/scidb/14.12/include/util/RWLock.h
+warning: File listed twice: /opt/scidb/14.12/include/util/RegionCoordinatesIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/RegionCoordinatesIterator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/SchemaUtils.h
+warning: File listed twice: /opt/scidb/14.12/include/util/SchemaUtils.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Semaphore.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Semaphore.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Singleton.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Singleton.h
+warning: File listed twice: /opt/scidb/14.12/include/util/SpatialType.h
+warning: File listed twice: /opt/scidb/14.12/include/util/SpatialType.h
+warning: File listed twice: /opt/scidb/14.12/include/util/StringUtil.h
+warning: File listed twice: /opt/scidb/14.12/include/util/StringUtil.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Thread.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Thread.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ThreadPool.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ThreadPool.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Timing.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Timing.h
+warning: File listed twice: /opt/scidb/14.12/include/util/TsvParser.h
+warning: File listed twice: /opt/scidb/14.12/include/util/TsvParser.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Utility.h
+warning: File listed twice: /opt/scidb/14.12/include/util/Utility.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ValueVector.h
+warning: File listed twice: /opt/scidb/14.12/include/util/ValueVector.h
+warning: File listed twice: /opt/scidb/14.12/include/util/WorkQueue.h
+warning: File listed twice: /opt/scidb/14.12/include/util/WorkQueue.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena
+warning: File listed twice: /opt/scidb/14.12/include/util/arena
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaDecorator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaDecorator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaDecorator.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaMonitor.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaMonitor.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ArenaMonitor.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Deque.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Deque.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Deque.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/LimitedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/LimitedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/LimitedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/List.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/List.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/List.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Managed.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Managed.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Managed.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Map.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Map.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Map.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ScopedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ScopedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/ScopedArena.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Set.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Set.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Set.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/String.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/String.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/String.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedMap.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedMap.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedMap.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedSet.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedSet.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/UnorderedSet.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Vector.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Vector.h
+warning: File listed twice: /opt/scidb/14.12/include/util/arena/Vector.h
+warning: File listed twice: /opt/scidb/14.12/include/util/forced_lexical_cast.h
+warning: File listed twice: /opt/scidb/14.12/include/util/forced_lexical_cast.h
+warning: File listed twice: /opt/scidb/14.12/include/util/iqsort.h
+warning: File listed twice: /opt/scidb/14.12/include/util/iqsort.h
+warning: File listed twice: /opt/scidb/14.12/include/util/shm
+warning: File listed twice: /opt/scidb/14.12/include/util/shm
+warning: File listed twice: /opt/scidb/14.12/include/util/shm/SharedMemoryIpc.h
+warning: File listed twice: /opt/scidb/14.12/include/util/shm/SharedMemoryIpc.h
+warning: File listed twice: /opt/scidb/14.12/include/util/shm/SharedMemoryIpc.h
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-doc-0-8690.noarch
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-jdbc-0-8690.x86_64
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: scidb-14.12-all-0-8690.x86_64
+Processing files: scidb-14.12-all-coord-0-8690.x86_64
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64
+Wrote: /builddir/build/RPMS/scidb-14.12-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/libscidbclient-14.12-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/libscidbclient-14.12-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-utils-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-utils-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-dev-tools-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-dev-tools-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-plugins-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-plugins-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/libscidbclient-14.12-python-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/libscidbclient-14.12-python-dbg-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-dev-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-doc-0-8690.noarch.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-jdbc-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-all-0-8690.x86_64.rpm
+Wrote: /builddir/build/RPMS/scidb-14.12-all-coord-0-8690.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.AE15wZ
++ umask 022
++ cd /builddir/build/BUILD
++ cd scidb-14.12-0
++ /bin/rm -rf /builddir/build/BUILDROOT/scidb-14.12-0-8690.x86_64
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

@@ -1,0 +1,13 @@
+http://netcologne.dl.sourceforge.net/project/boost/boost/1.54.0/boost_1_54_0.tar.bz2
+http://netcologne.dl.sourceforge.net/project/boost/boost/1.46.1/boost_1_46_1.tar.bz2
+http://pqxx.org/download/software/libpqxx/libpqxx-3.1.tar.gz
+http://www.cmake.org/files/v2.8/cmake-2.8.10.tar.gz
+http://prdownloads.sourceforge.net/swig/swig-2.0.8.tar.gz
+http://zlib.net/pigz/pigz-2.2.5.tar.gz
+https://fedorahosted.org/mock/raw-attachment/wiki/MockTarballs/mock-1.1.24.tar.xz
+http://www.sai.msu.su/apache/logging/log4cxx/0.10.0/apache-log4cxx-0.10.0.tar.gz
+http://protobuf.googlecode.com/files/protobuf-2.4.1.tar.bz2
+http://argparse.googlecode.com/files/argparse-1.2.1.tar.gz
+http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz
+http://www.samba.org/ftp/ccache/ccache-3.1.6.tar.xz
+http://netcologne.dl.sourceforge.net/project/cppunit/cppunit/1.12.1/cppunit-1.12.1.tar.gz

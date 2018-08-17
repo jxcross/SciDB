@@ -1,0 +1,19 @@
+#wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/apache-log4cxx-0.10.0.tar.gz
+#wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/apache-maven-3.0.4-bin.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/argparse-1.2.1.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/boost_1_46_1.tar.bz2
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/boost_1_54_0.tar.bz2
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/ccache-3.1.6.tar.xz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/cityhash-1.1.1.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/cmake-2.8.10.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/cppunit-1.12.1.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/libpqxx-3.1.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/mock-1.1.24.tar.xz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/mpich2-1.2.1.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/origins.txt
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/pigz-2.2.5.tar.gz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/protobuf-2.4.1.tar.bz2
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/scalapack.tgz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/scalapack_installer.tgz
+wget https://downloads.paradigm4.com/centos6.3/3rdparty_sources/swig-2.0.8.tar.gz
+

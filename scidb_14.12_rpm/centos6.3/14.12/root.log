@@ -1,0 +1,673 @@
+INFO backend.py:963:  Mock Version: 1.1.24
+DEBUG backend.py:305:  rootdir = /var/lib/mock/centos-6-x86_64/root/
+DEBUG backend.py:306:  resultdir = /tmp/packages
+INFO backend.py:309:  calling preinit hooks
+DEBUG util.py:58:  ensuring that dir exists: /var/cache/mock/centos-6-x86_64/root_cache/
+DEBUG util.py:308:  Executing command: ['tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/centos-6-x86_64/root_cache/cache.tar.gz', '-C', '/var/lib/mock/centos-6-x86_64/root/'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/./proc
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/./proc
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/./sys
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/./sys
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/./dev
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/./dev
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/./tmp/ccache
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/./tmp/ccache
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/./var/cache/yum
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/./var/cache/yum
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/cache/yum
+DEBUG backend.py:474:  create skeleton dirs
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/lib/rpm
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/lib/yum
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/lib/dbus
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/log
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/lock/rpm
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/cache/yum
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/etc/rpm
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/tmp
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/tmp/ccache
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/var/tmp
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/etc/yum.repos.d
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/etc/yum
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/proc
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/sys
+DEBUG backend.py:496:  touch required files
+DEBUG util.py:69:  touching file: /var/lib/mock/centos-6-x86_64/root/etc/mtab
+DEBUG util.py:69:  touching file: /var/lib/mock/centos-6-x86_64/root/etc/fstab
+DEBUG util.py:69:  touching file: /var/lib/mock/centos-6-x86_64/root/var/log/yum.log
+DEBUG backend.py:324:  configure yum
+DEBUG backend.py:339:  configure yum priorities
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/etc/yum/pluginconf.d
+DEBUG backend.py:348:  configure yum rhnplugin
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/etc/yum/pluginconf.d
+DEBUG util.py:84:  remove tree: /var/lib/mock/centos-6-x86_64/root/dev
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/dev/pts
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/dev/pts
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/dev/shm
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/dev/shm
+DEBUG backend.py:442:  kver == 2.6.32-358.6.2.el6.x86_64
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/centos-6-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/centos-6-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/centos-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/centos-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/centos-6-x86_64/yum_cache/', '/var/lib/mock/centos-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.D_PGZt', '/var/lib/mock/centos-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG backend.py:895:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/centos-6-x86_64/root/', 'update']
+DEBUG util.py:308:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/centos-6-x86_64/root/', 'update', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:   Package              Arch         Version                  Repository     Size
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:  Updating:
+DEBUG util.py:258:   kernel-headers       x86_64       2.6.32-504.3.3.el6       updates       3.3 M
+DEBUG util.py:258:  Transaction Summary
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:  Upgrade       1 Package(s)
+DEBUG util.py:258:  Total size: 3.3 M
+DEBUG util.py:258:  Updated:
+DEBUG util.py:258:    kernel-headers.x86_64 0:2.6.32-504.3.3.el6                                    
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:84:  remove tree: /var/lib/mock/centos-6-x86_64/root/builddir
+DEBUG util.py:308:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  userdel: mockbuild home directory (/builddir) not found
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:348:  Child return code was: 6
+DEBUG util.py:308:  Executing command: ['/usr/sbin/groupadd', '-g', '497', 'mockbuild'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: /usr/sbin/useradd -o -m -u 500 -g 497 -d /builddir -n mockbuild with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/RPMS
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/RPMS
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/SPECS
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/SPECS
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/BUILD
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/BUILD
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/builddir/build/originals
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/builddir/build/originals
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+INFO backend.py:581:  Installed packages:
+DEBUG util.py:308:  Executing command: ['rpm', '-q', '-a'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  setup-2.8.14-20.el6_4.1.noarch
+DEBUG util.py:258:  filesystem-2.4.30-3.el6.x86_64
+DEBUG util.py:258:  tzdata-2014j-1.el6.noarch
+DEBUG util.py:258:  ncurses-base-5.7-3.20090208.el6.x86_64
+DEBUG util.py:258:  glibc-common-2.12-1.149.el6.x86_64
+DEBUG util.py:258:  ncurses-libs-5.7-3.20090208.el6.x86_64
+DEBUG util.py:258:  libattr-2.4.44-7.el6.x86_64
+DEBUG util.py:258:  zlib-1.2.3-29.el6.x86_64
+DEBUG util.py:258:  db4-4.7.25-18.el6_4.x86_64
+DEBUG util.py:258:  bzip2-libs-1.0.5-7.el6_0.x86_64
+DEBUG util.py:258:  nss-util-3.16.2.3-2.el6_6.x86_64
+DEBUG util.py:258:  gmp-4.3.1-7.el6_2.2.x86_64
+DEBUG util.py:258:  chkconfig-1.3.49.3-2.el6_4.1.x86_64
+DEBUG util.py:258:  libsepol-2.0.41-4.el6.x86_64
+DEBUG util.py:258:  sed-4.2.1-10.el6.x86_64
+DEBUG util.py:258:  audit-libs-2.3.7-5.el6.x86_64
+DEBUG util.py:258:  readline-6.0-4.el6.x86_64
+DEBUG util.py:258:  libcom_err-1.41.12-21.el6.x86_64
+DEBUG util.py:258:  lua-5.1.4-4.1.el6.x86_64
+DEBUG util.py:258:  libidn-1.18-2.el6.x86_64
+DEBUG util.py:258:  expat-2.0.1-11.el6_2.x86_64
+DEBUG util.py:258:  nss-softokn-3.14.3-18.el6_6.x86_64
+DEBUG util.py:258:  xz-4.999.9-0.5.beta.20091007git.el6.x86_64
+DEBUG util.py:258:  pcre-7.8-6.el6.x86_64
+DEBUG util.py:258:  diffutils-2.8.1-28.el6.x86_64
+DEBUG util.py:258:  libtasn1-2.3-6.el6_5.x86_64
+DEBUG util.py:258:  pkgconfig-0.23-9.1.el6.x86_64
+DEBUG util.py:258:  gdbm-1.8.0-36.el6.x86_64
+DEBUG util.py:258:  perl-version-0.77-136.el6_6.1.x86_64
+DEBUG util.py:258:  perl-Pod-Simple-3.13-136.el6_6.1.x86_64
+DEBUG util.py:258:  perl-5.10.1-136.el6_6.1.x86_64
+DEBUG util.py:258:  libblkid-2.17.2-12.18.el6.x86_64
+DEBUG util.py:258:  ca-certificates-2014.1.98-65.1.el6.noarch
+DEBUG util.py:258:  xz-lzma-compat-4.999.9-0.5.beta.20091007git.el6.x86_64
+DEBUG util.py:258:  upstart-0.6.5-13.el6_5.3.x86_64
+DEBUG util.py:258:  libutempter-1.1.5-4.1.el6.x86_64
+DEBUG util.py:258:  elfutils-libs-0.158-3.2.el6.x86_64
+DEBUG util.py:258:  psmisc-22.6-19.el6_5.x86_64
+DEBUG util.py:258:  procps-3.2.8-30.el6.x86_64
+DEBUG util.py:258:  libselinux-utils-2.0.94-5.8.el6.x86_64
+DEBUG util.py:258:  ppl-0.10.2-11.el6.x86_64
+DEBUG util.py:258:  bzip2-1.0.5-7.el6_0.x86_64
+DEBUG util.py:258:  libstdc++-devel-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  cyrus-sasl-lib-2.1.23-15.el6_6.1.x86_64
+DEBUG util.py:258:  libgomp-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  libxml2-2.7.6-17.el6_6.1.x86_64
+DEBUG util.py:258:  glib2-2.28.8-4.el6.x86_64
+DEBUG util.py:258:  dbus-glib-0.86-6.el6.x86_64
+DEBUG util.py:258:  glibc-devel-2.12-1.149.el6.x86_64
+DEBUG util.py:258:  ncurses-5.7-3.20090208.el6.x86_64
+DEBUG util.py:258:  less-436-13.el6.x86_64
+DEBUG util.py:258:  gzip-1.3.12-22.el6.x86_64
+DEBUG util.py:258:  cracklib-dicts-2.8.16-4.el6.x86_64
+DEBUG util.py:258:  pam-1.1.1-20.el6.x86_64
+DEBUG util.py:258:  hwdata-0.233-11.1.el6.noarch
+DEBUG util.py:258:  nss-sysinit-3.16.2.3-3.el6_6.x86_64
+DEBUG util.py:258:  libffi-3.0.5-3.2.el6.x86_64
+DEBUG util.py:258:  krb5-libs-1.10.3-33.el6.x86_64
+DEBUG util.py:258:  python-2.6.6-52.el6.x86_64
+DEBUG util.py:258:  libssh2-1.4.2-1.el6.x86_64
+DEBUG util.py:258:  rpm-libs-4.8.0-38.el6_6.x86_64
+DEBUG util.py:258:  rpm-4.8.0-38.el6_6.x86_64
+DEBUG util.py:258:  gdb-7.2-75.el6.x86_64
+DEBUG util.py:258:  libsemanage-2.0.43-4.2.el6.x86_64
+DEBUG util.py:258:  mingetty-1.08-5.el6.x86_64
+DEBUG util.py:258:  iptables-1.4.7-14.el6.x86_64
+DEBUG util.py:258:  iputils-20071127-17.el6_4.2.x86_64
+DEBUG util.py:258:  initscripts-9.03.46-1.el6.centos.1.x86_64
+DEBUG util.py:258:  rpm-build-4.8.0-38.el6_6.x86_64
+DEBUG util.py:258:  gcc-c++-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  which-2.19-6.el6.x86_64
+DEBUG util.py:258:  kernel-headers-2.6.32-504.3.3.el6.x86_64
+DEBUG util.py:258:  libgcc-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  centos-release-6-6.el6.centos.12.2.x86_64
+DEBUG util.py:258:  basesystem-10.0-4.el6.noarch
+DEBUG util.py:258:  nss-softokn-freebl-3.14.3-18.el6_6.x86_64
+DEBUG util.py:258:  glibc-2.12-1.149.el6.x86_64
+DEBUG util.py:258:  bash-4.1.2-29.el6.x86_64
+DEBUG util.py:258:  libcap-2.16-5.5.el6.x86_64
+DEBUG util.py:258:  info-4.13a-8.el6.x86_64
+DEBUG util.py:258:  libstdc++-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  nspr-4.10.6-1.el6_5.x86_64
+DEBUG util.py:258:  libacl-2.2.49-6.el6.x86_64
+DEBUG util.py:258:  popt-1.13-7.el6.x86_64
+DEBUG util.py:258:  xz-libs-4.999.9-0.5.beta.20091007git.el6.x86_64
+DEBUG util.py:258:  libselinux-2.0.94-5.8.el6.x86_64
+DEBUG util.py:258:  elfutils-libelf-0.158-3.2.el6.x86_64
+DEBUG util.py:258:  shadow-utils-4.1.4.2-19.el6.x86_64
+DEBUG util.py:258:  file-libs-5.04-21.el6.x86_64
+DEBUG util.py:258:  dbus-libs-1.2.24-7.el6_3.x86_64
+DEBUG util.py:258:  gawk-3.1.7-10.el6.x86_64
+DEBUG util.py:258:  binutils-2.20.51.0.2-5.42.el6.x86_64
+DEBUG util.py:258:  sqlite-3.6.20-1.el6.x86_64
+DEBUG util.py:258:  findutils-4.4.2-6.el6.x86_64
+DEBUG util.py:258:  mpfr-2.4.1-6.el6.x86_64
+DEBUG util.py:258:  grep-2.6.3-6.el6.x86_64
+DEBUG util.py:258:  cpio-2.10-12.el6_5.x86_64
+DEBUG util.py:258:  p11-kit-0.18.5-2.el6_5.2.x86_64
+DEBUG util.py:258:  libuuid-2.17.2-12.18.el6.x86_64
+DEBUG util.py:258:  perl-Pod-Escapes-1.04-136.el6_6.1.x86_64
+DEBUG util.py:258:  perl-Module-Pluggable-3.90-136.el6_6.1.x86_64
+DEBUG util.py:258:  perl-libs-5.10.1-136.el6_6.1.x86_64
+DEBUG util.py:258:  sysvinit-tools-2.87-5.dsf.el6.x86_64
+DEBUG util.py:258:  p11-kit-trust-0.18.5-2.el6_5.2.x86_64
+DEBUG util.py:258:  cpp-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  libnih-1.0.1-7.el6.x86_64
+DEBUG util.py:258:  file-5.04-21.el6.x86_64
+DEBUG util.py:258:  MAKEDEV-3.24-6.el6.x86_64
+DEBUG util.py:258:  elfutils-0.158-3.2.el6.x86_64
+DEBUG util.py:258:  net-tools-1.60-110.el6_2.x86_64
+DEBUG util.py:258:  patch-2.6-6.el6.x86_64
+DEBUG util.py:258:  checkpolicy-2.0.22-1.el6.x86_64
+DEBUG util.py:258:  cloog-ppl-0.15.7-1.2.el6.x86_64
+DEBUG util.py:258:  unzip-6.0-1.el6.x86_64
+DEBUG util.py:258:  libusb-0.1.12-23.el6.x86_64
+DEBUG util.py:258:  db4-utils-4.7.25-18.el6_4.x86_64
+DEBUG util.py:258:  make-3.81-20.el6.x86_64
+DEBUG util.py:258:  gamin-0.1.10-9.el6.x86_64
+DEBUG util.py:258:  shared-mime-info-0.70-6.el6.x86_64
+DEBUG util.py:258:  glibc-headers-2.12-1.149.el6.x86_64
+DEBUG util.py:258:  gcc-4.4.7-11.el6.x86_64
+DEBUG util.py:258:  groff-1.18.1.4-21.el6.x86_64
+DEBUG util.py:258:  coreutils-libs-8.4-37.el6.x86_64
+DEBUG util.py:258:  cracklib-2.8.16-4.el6.x86_64
+DEBUG util.py:258:  coreutils-8.4-37.el6.x86_64
+DEBUG util.py:258:  module-init-tools-3.9-24.el6.x86_64
+DEBUG util.py:258:  nss-3.16.2.3-3.el6_6.x86_64
+DEBUG util.py:258:  nss-tools-3.16.2.3-3.el6_6.x86_64
+DEBUG util.py:258:  keyutils-libs-1.4-5.el6.x86_64
+DEBUG util.py:258:  openssl-1.0.1e-30.el6_6.4.x86_64
+DEBUG util.py:258:  python-libs-2.6.6-52.el6.x86_64
+DEBUG util.py:258:  libcurl-7.19.7-40.el6_6.3.x86_64
+DEBUG util.py:258:  curl-7.19.7-40.el6_6.3.x86_64
+DEBUG util.py:258:  openldap-2.4.39-8.el6.x86_64
+DEBUG util.py:258:  ustr-1.0.4-9.1.el6.x86_64
+DEBUG util.py:258:  ethtool-3.5-5.el6.x86_64
+DEBUG util.py:258:  policycoreutils-2.0.83-19.47.el6_6.1.x86_64
+DEBUG util.py:258:  iproute-2.6.32-33.el6_6.x86_64
+DEBUG util.py:258:  util-linux-ng-2.17.2-12.18.el6.x86_64
+DEBUG util.py:258:  udev-147-2.57.el6.x86_64
+DEBUG util.py:258:  redhat-rpm-config-9.0.3-42.el6.centos.noarch
+DEBUG util.py:258:  tar-1.23-11.el6.x86_64
+DEBUG util.py:258:  epel-release-6-8.noarch
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:84:  remove tree: /var/lib/mock/centos-6-x86_64/root/dev
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/dev/pts
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/dev/pts
+DEBUG util.py:58:  ensuring that dir exists: /var/lib/mock/centos-6-x86_64/root/dev/shm
+DEBUG util.py:61:  creating dir: /var/lib/mock/centos-6-x86_64/root/dev/shm
+DEBUG backend.py:442:  kver == 2.6.32-358.6.2.el6.x86_64
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/centos-6-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/centos-6-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/centos-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/centos-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/centos-6-x86_64/yum_cache/', '/var/lib/mock/centos-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.D_PGZt', '/var/lib/mock/centos-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['rpm', '-Uvh', '--nodeps', '/builddir/build/originals/scidb-14.12-0-8690.src.rpm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  scidb-14.12                 warning: user scidb does not exist - using root
+DEBUG util.py:258:  warning: group scidb does not exist - using root
+DEBUG util.py:258:  warning: user scidb does not exist - using root
+DEBUG util.py:258:  warning: group scidb does not exist - using root
+DEBUG util.py:258:  ##################################################
+DEBUG util.py:348:  Child return code was: 0
+DEBUG backend.py:895:  ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/centos-6-x86_64/root/', '/var/lib/mock/centos-6-x86_64/root///builddir/build/SRPMS/scidb-14.12-0-8690.src.rpm']
+DEBUG util.py:308:  Executing command: ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/centos-6-x86_64/root/', '/var/lib/mock/centos-6-x86_64/root///builddir/build/SRPMS/scidb-14.12-0-8690.src.rpm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:258:  Getting requirements for scidb-14.12-0-8690.src
+DEBUG util.py:258:   --> cmake-2.8.12.2-4.el6.x86_64
+DEBUG util.py:258:   --> Already installed : 1:make-3.81-20.el6.x86_64
+DEBUG util.py:258:   --> Already installed : gcc-c++-4.4.7-11.el6.x86_64
+DEBUG util.py:258:   --> gcc-gfortran-4.4.7-11.el6.x86_64
+DEBUG util.py:258:   --> flex-2.5.35-9.el6.x86_64
+DEBUG util.py:258:   --> flex-devel-2.5.35-9.el6.x86_64
+DEBUG util.py:258:   --> bison-2.4.1-5.el6.x86_64
+DEBUG util.py:258:   --> swig2-2.0.8-1.x86_64
+DEBUG util.py:258:   --> scidb-14.12-libboost-devel-1.54.0-0.x86_64
+DEBUG util.py:258:   --> protobuf-devel-2.4.1-2.x86_64
+DEBUG util.py:258:   --> log4cxx-devel-0.10.0-13.el6.x86_64
+DEBUG util.py:258:   --> libpqxx-devel-3.1-1.x86_64
+DEBUG util.py:258:   --> bzip2-devel-1.0.5-7.el6_0.x86_64
+DEBUG util.py:258:   --> zlib-devel-1.2.3-29.el6.x86_64
+DEBUG util.py:258:   --> readline-devel-6.0-4.el6.x86_64
+DEBUG util.py:258:   --> python-devel-2.6.6-52.el6.x86_64
+DEBUG util.py:258:   --> 1:doxygen-1.6.1-6.el6.x86_64
+DEBUG util.py:258:   --> fop-0.95-4.2.el6.x86_64
+DEBUG util.py:258:   --> docbook-style-xsl-1.75.2-6.el6.noarch
+DEBUG util.py:258:   --> libxslt-1.1.26-2.el6_3.1.x86_64
+DEBUG util.py:258:   --> scidb-14.12-mpich2-devel-1.2.1-2.3.el6.x86_64
+DEBUG util.py:258:   --> lapack-devel-3.2.1-4.el6.x86_64
+DEBUG util.py:258:   --> blas-devel-3.2.1-4.el6.x86_64
+DEBUG util.py:258:   --> openssh-clients-5.3p1-104.el6_6.1.x86_64
+DEBUG util.py:258:   --> cppunit-devel-1.12.1-3.1.el6.x86_64
+DEBUG util.py:258:   --> ant-1.7.1-13.el6.x86_64
+DEBUG util.py:258:   --> ant-contrib-1.0-0.10.b2.el6.noarch
+DEBUG util.py:258:   --> ant-nodeps-1.7.1-13.el6.x86_64
+DEBUG util.py:258:   --> ant-jdepend-1.7.1-13.el6.x86_64
+DEBUG util.py:258:   --> protobuf-compiler-2.4.1-2.x86_64
+DEBUG util.py:258:   --> protobuf-java-2.4.1-2.noarch
+DEBUG util.py:258:   --> 1:java-1.6.0-openjdk-devel-1.6.0.33-1.13.5.1.el6_6.x86_64
+DEBUG util.py:258:   --> junit-3.8.2-6.5.el6.x86_64
+DEBUG util.py:258:   --> git-1.7.1-3.el6_4.1.x86_64
+DEBUG util.py:258:   --> pam-devel-1.1.1-20.el6.x86_64
+DEBUG util.py:258:   --> libcsv-devel-3.0.3-2.el6.x86_64
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:   Package                         Arch   Version                   Repository
+DEBUG util.py:258:                                                                             Size
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:  Installing:
+DEBUG util.py:258:   ant                             x86_64 1.7.1-13.el6              base    2.5 M
+DEBUG util.py:258:   ant-contrib                     noarch 1.0-0.10.b2.el6           base    221 k
+DEBUG util.py:258:   ant-jdepend                     x86_64 1.7.1-13.el6              base     44 k
+DEBUG util.py:258:   ant-nodeps                      x86_64 1.7.1-13.el6              base    781 k
+DEBUG util.py:258:   bison                           x86_64 2.4.1-5.el6               base    637 k
+DEBUG util.py:258:   blas-devel                      x86_64 3.2.1-4.el6               base    133 k
+DEBUG util.py:258:   bzip2-devel                     x86_64 1.0.5-7.el6_0             base    250 k
+DEBUG util.py:258:   cmake                           x86_64 2.8.12.2-4.el6            base    8.0 M
+DEBUG util.py:258:   cppunit-devel                   x86_64 1.12.1-3.1.el6            base     63 k
+DEBUG util.py:258:   docbook-style-xsl               noarch 1.75.2-6.el6              base    2.6 M
+DEBUG util.py:258:   doxygen                         x86_64 1:1.6.1-6.el6             base    2.4 M
+DEBUG util.py:258:   flex                            x86_64 2.5.35-9.el6              base    285 k
+DEBUG util.py:258:   flex-devel                      x86_64 2.5.35-9.el6              base     12 k
+DEBUG util.py:258:   fop                             x86_64 0.95-4.2.el6              base    2.6 M
+DEBUG util.py:258:   gcc-gfortran                    x86_64 4.4.7-11.el6              base    4.7 M
+DEBUG util.py:258:   git                             x86_64 1.7.1-3.el6_4.1           base    4.6 M
+DEBUG util.py:258:   java-1.6.0-openjdk-devel        x86_64 1:1.6.0.33-1.13.5.1.el6_6 updates  15 M
+DEBUG util.py:258:   junit                           x86_64 3.8.2-6.5.el6             base    295 k
+DEBUG util.py:258:   lapack-devel                    x86_64 3.2.1-4.el6               base    4.5 M
+DEBUG util.py:258:   libcsv-devel                    x86_64 3.0.3-2.el6               epel     13 k
+DEBUG util.py:258:   libpqxx-devel                   x86_64 3.1-1                     scidb    90 k
+DEBUG util.py:258:   libxslt                         x86_64 1.1.26-2.el6_3.1          base    452 k
+DEBUG util.py:258:   log4cxx-devel                   x86_64 0.10.0-13.el6             epel    766 k
+DEBUG util.py:258:   openssh-clients                 x86_64 5.3p1-104.el6_6.1         updates 437 k
+DEBUG util.py:258:   pam-devel                       x86_64 1.1.1-20.el6              base    206 k
+DEBUG util.py:258:   protobuf-compiler               x86_64 2.4.1-2                   scidb   210 k
+DEBUG util.py:258:   protobuf-devel                  x86_64 2.4.1-2                   scidb   137 k
+DEBUG util.py:258:   protobuf-java                   noarch 2.4.1-2                   scidb   414 k
+DEBUG util.py:258:   python-devel                    x86_64 2.6.6-52.el6              base    171 k
+DEBUG util.py:258:   readline-devel                  x86_64 6.0-4.el6                 base    134 k
+DEBUG util.py:258:   scidb-14.12-libboost-devel      x86_64 1.54.0-0                  scidb   7.8 M
+DEBUG util.py:258:   scidb-14.12-mpich2-devel        x86_64 1.2.1-2.3.el6             scidb   1.1 M
+DEBUG util.py:258:   swig2                           x86_64 2.0.8-1                   scidb   3.4 M
+DEBUG util.py:258:   zlib-devel                      x86_64 1.2.3-29.el6              base     44 k
+DEBUG util.py:258:  Installing for dependencies:
+DEBUG util.py:258:   alsa-lib                        x86_64 1.0.22-3.el6              base    370 k
+DEBUG util.py:258:   apr                             x86_64 1.3.9-5.el6_2             base    123 k
+DEBUG util.py:258:   apr-devel                       x86_64 1.3.9-5.el6_2             base    176 k
+DEBUG util.py:258:   apr-util                        x86_64 1.3.9-3.el6_0.1           base     87 k
+DEBUG util.py:258:   atk                             x86_64 1.30.0-1.el6              base    195 k
+DEBUG util.py:258:   autoconf                        noarch 2.63-5.1.el6              base    781 k
+DEBUG util.py:258:   automake                        noarch 1.11.1-4.el6              base    550 k
+DEBUG util.py:258:   avahi-libs                      x86_64 0.6.25-15.el6             base     55 k
+DEBUG util.py:258:   avalon-framework                x86_64 4.1.4-7.el6               base    127 k
+DEBUG util.py:258:   batik                           x86_64 1.7-8.5.el6               base    6.8 M
+DEBUG util.py:258:   blas                            x86_64 3.2.1-4.el6               base    321 k
+DEBUG util.py:258:   cairo                           x86_64 1.8.8-3.1.el6             base    309 k
+DEBUG util.py:258:   cppunit                         x86_64 1.12.1-3.1.el6            base    153 k
+DEBUG util.py:258:   cups-libs                       x86_64 1:1.4.2-67.el6            base    320 k
+DEBUG util.py:258:   docbook-dtds                    noarch 1.0-51.el6                base    274 k
+DEBUG util.py:258:   fipscheck                       x86_64 1.2.0-7.el6               base     14 k
+DEBUG util.py:258:   fipscheck-lib                   x86_64 1.2.0-7.el6               base    8.3 k
+DEBUG util.py:258:   flac                            x86_64 1.2.1-6.1.el6             base    243 k
+DEBUG util.py:258:   fontconfig                      x86_64 2.8.0-5.el6               base    186 k
+DEBUG util.py:258:   freetype                        x86_64 2.3.11-14.el6_3.1         base    359 k
+DEBUG util.py:258:   gdk-pixbuf2                     x86_64 2.24.1-5.el6              base    501 k
+DEBUG util.py:258:   giflib                          x86_64 4.1.6-3.1.el6             base     37 k
+DEBUG util.py:258:   gnutls                          x86_64 2.8.5-14.el6_5            base    346 k
+DEBUG util.py:258:   gtk2                            x86_64 2.24.23-6.el6             base    3.2 M
+DEBUG util.py:258:   hicolor-icon-theme              noarch 0.11-1.1.el6              base     40 k
+DEBUG util.py:258:   jakarta-commons-httpclient      x86_64 1:3.1-0.9.el6_5           base    593 k
+DEBUG util.py:258:   jakarta-commons-io              noarch 1.4-3.el6                 base    105 k
+DEBUG util.py:258:   jakarta-commons-logging         noarch 1.0.4-10.el6              base     52 k
+DEBUG util.py:258:   jasper-libs                     x86_64 1.900.1-16.el6_6.2        updates 137 k
+DEBUG util.py:258:   java-1.5.0-gcj                  x86_64 1.5.0.0-29.1.el6          base    139 k
+DEBUG util.py:258:   java-1.6.0-openjdk              x86_64 1:1.6.0.33-1.13.5.1.el6_6 updates  41 M
+DEBUG util.py:258:   java-1.7.0-openjdk              x86_64 1:1.7.0.71-2.5.3.2.el6_6  updates  26 M
+DEBUG util.py:258:   java_cup                        x86_64 1:0.10k-5.el6             base    197 k
+DEBUG util.py:258:   jdepend                         noarch 2.9-1.2.el6               base    175 k
+DEBUG util.py:258:   jline                           noarch 0.9.94-0.8.el6            base     86 k
+DEBUG util.py:258:   jpackage-utils                  noarch 1.7.5-3.12.el6            base     59 k
+DEBUG util.py:258:   lapack                          x86_64 3.2.1-4.el6               base    4.3 M
+DEBUG util.py:258:   libICE                          x86_64 1.0.6-1.el6               base     53 k
+DEBUG util.py:258:   libSM                           x86_64 1.2.1-2.el6               base     37 k
+DEBUG util.py:258:   libX11                          x86_64 1.6.0-2.2.el6             base    586 k
+DEBUG util.py:258:   libX11-common                   noarch 1.6.0-2.2.el6             base    192 k
+DEBUG util.py:258:   libXau                          x86_64 1.0.6-4.el6               base     24 k
+DEBUG util.py:258:   libXcomposite                   x86_64 0.4.3-4.el6               base     20 k
+DEBUG util.py:258:   libXcursor                      x86_64 1.1.14-2.1.el6            base     28 k
+DEBUG util.py:258:   libXdamage                      x86_64 1.1.3-4.el6               base     18 k
+DEBUG util.py:258:   libXext                         x86_64 1.3.2-2.1.el6             base     35 k
+DEBUG util.py:258:   libXfixes                       x86_64 5.0.1-2.1.el6             base     17 k
+DEBUG util.py:258:   libXfont                        x86_64 1.4.5-4.el6_6             updates 137 k
+DEBUG util.py:258:   libXft                          x86_64 2.3.1-2.el6               base     55 k
+DEBUG util.py:258:   libXi                           x86_64 1.7.2-2.2.el6             base     37 k
+DEBUG util.py:258:   libXinerama                     x86_64 1.1.3-2.1.el6             base     13 k
+DEBUG util.py:258:   libXrandr                       x86_64 1.4.1-2.1.el6             base     23 k
+DEBUG util.py:258:   libXrender                      x86_64 0.9.8-2.1.el6             base     24 k
+DEBUG util.py:258:   libXtst                         x86_64 1.2.2-2.1.el6             base     19 k
+DEBUG util.py:258:   libarchive                      x86_64 2.8.3-4.el6_2             base    126 k
+DEBUG util.py:258:   libart_lgpl                     x86_64 2.3.20-5.1.el6            base     65 k
+DEBUG util.py:258:   libasyncns                      x86_64 0.8-1.1.el6               base     24 k
+DEBUG util.py:258:   libcsv                          x86_64 3.0.3-2.el6               epel     21 k
+DEBUG util.py:258:   libedit                         x86_64 2.11-4.20080712cvs.1.el6  base     74 k
+DEBUG util.py:258:   libfontenc                      x86_64 1.0.5-2.el6               base     24 k
+DEBUG util.py:258:   libgcj                          x86_64 4.4.7-11.el6              base     19 M
+DEBUG util.py:258:   libgcrypt                       x86_64 1.4.5-11.el6_4            base    229 k
+DEBUG util.py:258:   libgfortran                     x86_64 4.4.7-11.el6              base    267 k
+DEBUG util.py:258:   libgpg-error                    x86_64 1.7-4.el6                 base     59 k
+DEBUG util.py:258:   libicu                          x86_64 4.2.1-9.1.el6_2           base    4.9 M
+DEBUG util.py:258:   libjpeg-turbo                   x86_64 1.2.1-3.el6_5             base    174 k
+DEBUG util.py:258:   libogg                          x86_64 2:1.1.4-2.1.el6           base     21 k
+DEBUG util.py:258:   libpng                          x86_64 2:1.2.49-1.el6_2          base    182 k
+DEBUG util.py:258:   libpqxx                         x86_64 3.1-1                     scidb   186 k
+DEBUG util.py:258:   libsndfile                      x86_64 1.0.20-5.el6              base    233 k
+DEBUG util.py:258:   libthai                         x86_64 0.1.12-3.el6              base    183 k
+DEBUG util.py:258:   libtiff                         x86_64 3.9.4-10.el6_5            base    343 k
+DEBUG util.py:258:   libvorbis                       x86_64 1:1.2.3-4.el6_2.1         base    168 k
+DEBUG util.py:258:   libxcb                          x86_64 1.9.1-2.el6               base    110 k
+DEBUG util.py:258:   log4cxx                         x86_64 0.10.0-13.el6             epel    449 k
+DEBUG util.py:258:   m4                              x86_64 1.4.13-5.el6              base    278 k
+DEBUG util.py:258:   ncurses-devel                   x86_64 5.7-3.20090208.el6        base    642 k
+DEBUG util.py:258:   openssh                         x86_64 5.3p1-104.el6_6.1         updates 272 k
+DEBUG util.py:258:   pango                           x86_64 1.28.1-10.el6             base    351 k
+DEBUG util.py:258:   perl-Error                      noarch 1:0.17015-4.el6           base     29 k
+DEBUG util.py:258:   perl-Git                        noarch 1.7.1-3.el6_4.1           base     28 k
+DEBUG util.py:258:   pixman                          x86_64 0.32.4-4.el6              base    243 k
+DEBUG util.py:258:   postgresql                      x86_64 8.4.20-1.el6_5            base    2.6 M
+DEBUG util.py:258:   postgresql-devel                x86_64 8.4.20-1.el6_5            base    815 k
+DEBUG util.py:258:   postgresql-libs                 x86_64 8.4.20-1.el6_5            base    201 k
+DEBUG util.py:258:   protobuf                        x86_64 2.4.1-2                   scidb   295 k
+DEBUG util.py:258:   pulseaudio-libs                 x86_64 0.9.21-17.el6             base    462 k
+DEBUG util.py:258:   rhino                           noarch 1.7-0.7.r2.2.el6          base    778 k
+DEBUG util.py:258:   rsync                           x86_64 3.0.6-12.el6              base    335 k
+DEBUG util.py:258:   scidb-14.12-libboost            x86_64 1.54.0-0                  scidb   3.4 k
+DEBUG util.py:258:   scidb-14.12-libboost-atomic     x86_64 1.54.0-0                  scidb   5.8 k
+DEBUG util.py:258:   scidb-14.12-libboost-chrono     x86_64 1.54.0-0                  scidb    13 k
+DEBUG util.py:258:   scidb-14.12-libboost-context    x86_64 1.54.0-0                  scidb   5.7 k
+DEBUG util.py:258:   scidb-14.12-libboost-date-time  x86_64 1.54.0-0                  scidb    20 k
+DEBUG util.py:258:   scidb-14.12-libboost-filesystem x86_64 1.54.0-0                  scidb    35 k
+DEBUG util.py:258:   scidb-14.12-libboost-graph      x86_64 1.54.0-0                  scidb    98 k
+DEBUG util.py:258:   scidb-14.12-libboost-iostreams  x86_64 1.54.0-0                  scidb    30 k
+DEBUG util.py:258:   scidb-14.12-libboost-locale     x86_64 1.54.0-0                  scidb   241 k
+DEBUG util.py:258:   scidb-14.12-libboost-log        x86_64 1.54.0-0                  scidb   631 k
+DEBUG util.py:258:   scidb-14.12-libboost-log_setup  x86_64 1.54.0-0                  scidb   423 k
+DEBUG util.py:258:   scidb-14.12-libboost-math       x86_64 1.54.0-0                  scidb   304 k
+DEBUG util.py:258:   scidb-14.12-libboost-program-options
+DEBUG util.py:258:                                   x86_64 1.54.0-0                  scidb   112 k
+DEBUG util.py:258:   scidb-14.12-libboost-python     x86_64 1.54.0-0                  scidb    98 k
+DEBUG util.py:258:   scidb-14.12-libboost-random     x86_64 1.54.0-0                  scidb   8.6 k
+DEBUG util.py:258:   scidb-14.12-libboost-regex      x86_64 1.54.0-0                  scidb   281 k
+DEBUG util.py:258:   scidb-14.12-libboost-serialization
+DEBUG util.py:258:                                   x86_64 1.54.0-0                  scidb   139 k
+DEBUG util.py:258:   scidb-14.12-libboost-signals    x86_64 1.54.0-0                  scidb    29 k
+DEBUG util.py:258:   scidb-14.12-libboost-system     x86_64 1.54.0-0                  scidb   8.1 k
+DEBUG util.py:258:   scidb-14.12-libboost-test       x86_64 1.54.0-0                  scidb   203 k
+DEBUG util.py:258:   scidb-14.12-libboost-thread     x86_64 1.54.0-0                  scidb    29 k
+DEBUG util.py:258:   scidb-14.12-libboost-timer      x86_64 1.54.0-0                  scidb    10 k
+DEBUG util.py:258:   scidb-14.12-libboost-wave       x86_64 1.54.0-0                  scidb   191 k
+DEBUG util.py:258:   scidb-14.12-mpich2              x86_64 1.2.1-2.3.el6             scidb   3.7 M
+DEBUG util.py:258:   sgml-common                     noarch 0.6.3-33.el6              base     43 k
+DEBUG util.py:258:   sinjdoc                         x86_64 0.5-9.1.el6               base    705 k
+DEBUG util.py:258:   tcp_wrappers-libs               x86_64 7.6-57.el6                base     62 k
+DEBUG util.py:258:   ttmkfdir                        x86_64 3.0.9-32.1.el6            base     43 k
+DEBUG util.py:258:   tzdata-java                     noarch 2014j-1.el6               updates 175 k
+DEBUG util.py:258:   xalan-j2                        noarch 2.7.0-9.9.el6_5           base    1.8 M
+DEBUG util.py:258:   xerces-j2                       x86_64 2.7.1-12.7.el6_5          updates 2.5 M
+DEBUG util.py:258:   xml-common                      noarch 0.6.3-33.el6              base     18 k
+DEBUG util.py:258:   xml-commons-apis                x86_64 1.3.04-3.6.el6            base    439 k
+DEBUG util.py:258:   xml-commons-resolver            x86_64 1.1-4.18.el6              base    145 k
+DEBUG util.py:258:   xmlgraphics-commons             noarch 1.3.1-1.1.el6             base    468 k
+DEBUG util.py:258:   xorg-x11-font-utils             x86_64 1:7.2-11.el6              base     75 k
+DEBUG util.py:258:   xorg-x11-fonts-Type1            noarch 7.2-9.1.el6               base    520 k
+DEBUG util.py:258:   zip                             x86_64 3.0-1.el6                 base    260 k
+DEBUG util.py:258:  Transaction Summary
+DEBUG util.py:258:  ================================================================================
+DEBUG util.py:258:  Install     161 Package(s)
+DEBUG util.py:258:  Total size: 201 M
+DEBUG util.py:258:  Installed size: 635 M
+DEBUG util.py:258:  Installed:
+DEBUG util.py:258:    ant.x86_64 0:1.7.1-13.el6                                                     
+DEBUG util.py:258:    ant-contrib.noarch 0:1.0-0.10.b2.el6                                          
+DEBUG util.py:258:    ant-jdepend.x86_64 0:1.7.1-13.el6                                             
+DEBUG util.py:258:    ant-nodeps.x86_64 0:1.7.1-13.el6                                              
+DEBUG util.py:258:    bison.x86_64 0:2.4.1-5.el6                                                    
+DEBUG util.py:258:    blas-devel.x86_64 0:3.2.1-4.el6                                               
+DEBUG util.py:258:    bzip2-devel.x86_64 0:1.0.5-7.el6_0                                            
+DEBUG util.py:258:    cmake.x86_64 0:2.8.12.2-4.el6                                                 
+DEBUG util.py:258:    cppunit-devel.x86_64 0:1.12.1-3.1.el6                                         
+DEBUG util.py:258:    docbook-style-xsl.noarch 0:1.75.2-6.el6                                       
+DEBUG util.py:258:    doxygen.x86_64 1:1.6.1-6.el6                                                  
+DEBUG util.py:258:    flex.x86_64 0:2.5.35-9.el6                                                    
+DEBUG util.py:258:    flex-devel.x86_64 0:2.5.35-9.el6                                              
+DEBUG util.py:258:    fop.x86_64 0:0.95-4.2.el6                                                     
+DEBUG util.py:258:    gcc-gfortran.x86_64 0:4.4.7-11.el6                                            
+DEBUG util.py:258:    git.x86_64 0:1.7.1-3.el6_4.1                                                  
+DEBUG util.py:258:    java-1.6.0-openjdk-devel.x86_64 1:1.6.0.33-1.13.5.1.el6_6                     
+DEBUG util.py:258:    junit.x86_64 0:3.8.2-6.5.el6                                                  
+DEBUG util.py:258:    lapack-devel.x86_64 0:3.2.1-4.el6                                             
+DEBUG util.py:258:    libcsv-devel.x86_64 0:3.0.3-2.el6                                             
+DEBUG util.py:258:    libpqxx-devel.x86_64 0:3.1-1                                                  
+DEBUG util.py:258:    libxslt.x86_64 0:1.1.26-2.el6_3.1                                             
+DEBUG util.py:258:    log4cxx-devel.x86_64 0:0.10.0-13.el6                                          
+DEBUG util.py:258:    openssh-clients.x86_64 0:5.3p1-104.el6_6.1                                    
+DEBUG util.py:258:    pam-devel.x86_64 0:1.1.1-20.el6                                               
+DEBUG util.py:258:    protobuf-compiler.x86_64 0:2.4.1-2                                            
+DEBUG util.py:258:    protobuf-devel.x86_64 0:2.4.1-2                                               
+DEBUG util.py:258:    protobuf-java.noarch 0:2.4.1-2                                                
+DEBUG util.py:258:    python-devel.x86_64 0:2.6.6-52.el6                                            
+DEBUG util.py:258:    readline-devel.x86_64 0:6.0-4.el6                                             
+DEBUG util.py:258:    scidb-14.12-libboost-devel.x86_64 0:1.54.0-0                                  
+DEBUG util.py:258:    scidb-14.12-mpich2-devel.x86_64 0:1.2.1-2.3.el6                               
+DEBUG util.py:258:    swig2.x86_64 0:2.0.8-1                                                        
+DEBUG util.py:258:    zlib-devel.x86_64 0:1.2.3-29.el6                                              
+DEBUG util.py:258:  Dependency Installed:
+DEBUG util.py:258:    alsa-lib.x86_64 0:1.0.22-3.el6                                                
+DEBUG util.py:258:    apr.x86_64 0:1.3.9-5.el6_2                                                    
+DEBUG util.py:258:    apr-devel.x86_64 0:1.3.9-5.el6_2                                              
+DEBUG util.py:258:    apr-util.x86_64 0:1.3.9-3.el6_0.1                                             
+DEBUG util.py:258:    atk.x86_64 0:1.30.0-1.el6                                                     
+DEBUG util.py:258:    autoconf.noarch 0:2.63-5.1.el6                                                
+DEBUG util.py:258:    automake.noarch 0:1.11.1-4.el6                                                
+DEBUG util.py:258:    avahi-libs.x86_64 0:0.6.25-15.el6                                             
+DEBUG util.py:258:    avalon-framework.x86_64 0:4.1.4-7.el6                                         
+DEBUG util.py:258:    batik.x86_64 0:1.7-8.5.el6                                                    
+DEBUG util.py:258:    blas.x86_64 0:3.2.1-4.el6                                                     
+DEBUG util.py:258:    cairo.x86_64 0:1.8.8-3.1.el6                                                  
+DEBUG util.py:258:    cppunit.x86_64 0:1.12.1-3.1.el6                                               
+DEBUG util.py:258:    cups-libs.x86_64 1:1.4.2-67.el6                                               
+DEBUG util.py:258:    docbook-dtds.noarch 0:1.0-51.el6                                              
+DEBUG util.py:258:    fipscheck.x86_64 0:1.2.0-7.el6                                                
+DEBUG util.py:258:    fipscheck-lib.x86_64 0:1.2.0-7.el6                                            
+DEBUG util.py:258:    flac.x86_64 0:1.2.1-6.1.el6                                                   
+DEBUG util.py:258:    fontconfig.x86_64 0:2.8.0-5.el6                                               
+DEBUG util.py:258:    freetype.x86_64 0:2.3.11-14.el6_3.1                                           
+DEBUG util.py:258:    gdk-pixbuf2.x86_64 0:2.24.1-5.el6                                             
+DEBUG util.py:258:    giflib.x86_64 0:4.1.6-3.1.el6                                                 
+DEBUG util.py:258:    gnutls.x86_64 0:2.8.5-14.el6_5                                                
+DEBUG util.py:258:    gtk2.x86_64 0:2.24.23-6.el6                                                   
+DEBUG util.py:258:    hicolor-icon-theme.noarch 0:0.11-1.1.el6                                      
+DEBUG util.py:258:    jakarta-commons-httpclient.x86_64 1:3.1-0.9.el6_5                             
+DEBUG util.py:258:    jakarta-commons-io.noarch 0:1.4-3.el6                                         
+DEBUG util.py:258:    jakarta-commons-logging.noarch 0:1.0.4-10.el6                                 
+DEBUG util.py:258:    jasper-libs.x86_64 0:1.900.1-16.el6_6.2                                       
+DEBUG util.py:258:    java-1.5.0-gcj.x86_64 0:1.5.0.0-29.1.el6                                      
+DEBUG util.py:258:    java-1.6.0-openjdk.x86_64 1:1.6.0.33-1.13.5.1.el6_6                           
+DEBUG util.py:258:    java-1.7.0-openjdk.x86_64 1:1.7.0.71-2.5.3.2.el6_6                            
+DEBUG util.py:258:    java_cup.x86_64 1:0.10k-5.el6                                                 
+DEBUG util.py:258:    jdepend.noarch 0:2.9-1.2.el6                                                  
+DEBUG util.py:258:    jline.noarch 0:0.9.94-0.8.el6                                                 
+DEBUG util.py:258:    jpackage-utils.noarch 0:1.7.5-3.12.el6                                        
+DEBUG util.py:258:    lapack.x86_64 0:3.2.1-4.el6                                                   
+DEBUG util.py:258:    libICE.x86_64 0:1.0.6-1.el6                                                   
+DEBUG util.py:258:    libSM.x86_64 0:1.2.1-2.el6                                                    
+DEBUG util.py:258:    libX11.x86_64 0:1.6.0-2.2.el6                                                 
+DEBUG util.py:258:    libX11-common.noarch 0:1.6.0-2.2.el6                                          
+DEBUG util.py:258:    libXau.x86_64 0:1.0.6-4.el6                                                   
+DEBUG util.py:258:    libXcomposite.x86_64 0:0.4.3-4.el6                                            
+DEBUG util.py:258:    libXcursor.x86_64 0:1.1.14-2.1.el6                                            
+DEBUG util.py:258:    libXdamage.x86_64 0:1.1.3-4.el6                                               
+DEBUG util.py:258:    libXext.x86_64 0:1.3.2-2.1.el6                                                
+DEBUG util.py:258:    libXfixes.x86_64 0:5.0.1-2.1.el6                                              
+DEBUG util.py:258:    libXfont.x86_64 0:1.4.5-4.el6_6                                               
+DEBUG util.py:258:    libXft.x86_64 0:2.3.1-2.el6                                                   
+DEBUG util.py:258:    libXi.x86_64 0:1.7.2-2.2.el6                                                  
+DEBUG util.py:258:    libXinerama.x86_64 0:1.1.3-2.1.el6                                            
+DEBUG util.py:258:    libXrandr.x86_64 0:1.4.1-2.1.el6                                              
+DEBUG util.py:258:    libXrender.x86_64 0:0.9.8-2.1.el6                                             
+DEBUG util.py:258:    libXtst.x86_64 0:1.2.2-2.1.el6                                                
+DEBUG util.py:258:    libarchive.x86_64 0:2.8.3-4.el6_2                                             
+DEBUG util.py:258:    libart_lgpl.x86_64 0:2.3.20-5.1.el6                                           
+DEBUG util.py:258:    libasyncns.x86_64 0:0.8-1.1.el6                                               
+DEBUG util.py:258:    libcsv.x86_64 0:3.0.3-2.el6                                                   
+DEBUG util.py:258:    libedit.x86_64 0:2.11-4.20080712cvs.1.el6                                     
+DEBUG util.py:258:    libfontenc.x86_64 0:1.0.5-2.el6                                               
+DEBUG util.py:258:    libgcj.x86_64 0:4.4.7-11.el6                                                  
+DEBUG util.py:258:    libgcrypt.x86_64 0:1.4.5-11.el6_4                                             
+DEBUG util.py:258:    libgfortran.x86_64 0:4.4.7-11.el6                                             
+DEBUG util.py:258:    libgpg-error.x86_64 0:1.7-4.el6                                               
+DEBUG util.py:258:    libicu.x86_64 0:4.2.1-9.1.el6_2                                               
+DEBUG util.py:258:    libjpeg-turbo.x86_64 0:1.2.1-3.el6_5                                          
+DEBUG util.py:258:    libogg.x86_64 2:1.1.4-2.1.el6                                                 
+DEBUG util.py:258:    libpng.x86_64 2:1.2.49-1.el6_2                                                
+DEBUG util.py:258:    libpqxx.x86_64 0:3.1-1                                                        
+DEBUG util.py:258:    libsndfile.x86_64 0:1.0.20-5.el6                                              
+DEBUG util.py:258:    libthai.x86_64 0:0.1.12-3.el6                                                 
+DEBUG util.py:258:    libtiff.x86_64 0:3.9.4-10.el6_5                                               
+DEBUG util.py:258:    libvorbis.x86_64 1:1.2.3-4.el6_2.1                                            
+DEBUG util.py:258:    libxcb.x86_64 0:1.9.1-2.el6                                                   
+DEBUG util.py:258:    log4cxx.x86_64 0:0.10.0-13.el6                                                
+DEBUG util.py:258:    m4.x86_64 0:1.4.13-5.el6                                                      
+DEBUG util.py:258:    ncurses-devel.x86_64 0:5.7-3.20090208.el6                                     
+DEBUG util.py:258:    openssh.x86_64 0:5.3p1-104.el6_6.1                                            
+DEBUG util.py:258:    pango.x86_64 0:1.28.1-10.el6                                                  
+DEBUG util.py:258:    perl-Error.noarch 1:0.17015-4.el6                                             
+DEBUG util.py:258:    perl-Git.noarch 0:1.7.1-3.el6_4.1                                             
+DEBUG util.py:258:    pixman.x86_64 0:0.32.4-4.el6                                                  
+DEBUG util.py:258:    postgresql.x86_64 0:8.4.20-1.el6_5                                            
+DEBUG util.py:258:    postgresql-devel.x86_64 0:8.4.20-1.el6_5                                      
+DEBUG util.py:258:    postgresql-libs.x86_64 0:8.4.20-1.el6_5                                       
+DEBUG util.py:258:    protobuf.x86_64 0:2.4.1-2                                                     
+DEBUG util.py:258:    pulseaudio-libs.x86_64 0:0.9.21-17.el6                                        
+DEBUG util.py:258:    rhino.noarch 0:1.7-0.7.r2.2.el6                                               
+DEBUG util.py:258:    rsync.x86_64 0:3.0.6-12.el6                                                   
+DEBUG util.py:258:    scidb-14.12-libboost.x86_64 0:1.54.0-0                                        
+DEBUG util.py:258:    scidb-14.12-libboost-atomic.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-chrono.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-context.x86_64 0:1.54.0-0                                
+DEBUG util.py:258:    scidb-14.12-libboost-date-time.x86_64 0:1.54.0-0                              
+DEBUG util.py:258:    scidb-14.12-libboost-filesystem.x86_64 0:1.54.0-0                             
+DEBUG util.py:258:    scidb-14.12-libboost-graph.x86_64 0:1.54.0-0                                  
+DEBUG util.py:258:    scidb-14.12-libboost-iostreams.x86_64 0:1.54.0-0                              
+DEBUG util.py:258:    scidb-14.12-libboost-locale.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-log.x86_64 0:1.54.0-0                                    
+DEBUG util.py:258:    scidb-14.12-libboost-log_setup.x86_64 0:1.54.0-0                              
+DEBUG util.py:258:    scidb-14.12-libboost-math.x86_64 0:1.54.0-0                                   
+DEBUG util.py:258:    scidb-14.12-libboost-program-options.x86_64 0:1.54.0-0                        
+DEBUG util.py:258:    scidb-14.12-libboost-python.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-random.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-regex.x86_64 0:1.54.0-0                                  
+DEBUG util.py:258:    scidb-14.12-libboost-serialization.x86_64 0:1.54.0-0                          
+DEBUG util.py:258:    scidb-14.12-libboost-signals.x86_64 0:1.54.0-0                                
+DEBUG util.py:258:    scidb-14.12-libboost-system.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-test.x86_64 0:1.54.0-0                                   
+DEBUG util.py:258:    scidb-14.12-libboost-thread.x86_64 0:1.54.0-0                                 
+DEBUG util.py:258:    scidb-14.12-libboost-timer.x86_64 0:1.54.0-0                                  
+DEBUG util.py:258:    scidb-14.12-libboost-wave.x86_64 0:1.54.0-0                                   
+DEBUG util.py:258:    scidb-14.12-mpich2.x86_64 0:1.2.1-2.3.el6                                     
+DEBUG util.py:258:    sgml-common.noarch 0:0.6.3-33.el6                                             
+DEBUG util.py:258:    sinjdoc.x86_64 0:0.5-9.1.el6                                                  
+DEBUG util.py:258:    tcp_wrappers-libs.x86_64 0:7.6-57.el6                                         
+DEBUG util.py:258:    ttmkfdir.x86_64 0:3.0.9-32.1.el6                                              
+DEBUG util.py:258:    tzdata-java.noarch 0:2014j-1.el6                                              
+DEBUG util.py:258:    xalan-j2.noarch 0:2.7.0-9.9.el6_5                                             
+DEBUG util.py:258:    xerces-j2.x86_64 0:2.7.1-12.7.el6_5                                           
+DEBUG util.py:258:    xml-common.noarch 0:0.6.3-33.el6                                              
+DEBUG util.py:258:    xml-commons-apis.x86_64 0:1.3.04-3.6.el6                                      
+DEBUG util.py:258:    xml-commons-resolver.x86_64 0:1.1-4.18.el6                                    
+DEBUG util.py:258:    xmlgraphics-commons.noarch 0:1.3.1-1.1.el6                                    
+DEBUG util.py:258:    xorg-x11-font-utils.x86_64 1:7.2-11.el6                                       
+DEBUG util.py:258:    xorg-x11-fonts-Type1.noarch 0:7.2-9.1.el6                                     
+DEBUG util.py:258:    zip.x86_64 0:3.0-1.el6                                                        
+DEBUG util.py:348:  Child return code was: 0
+DEBUG backend.py:678:  Copying packages to result dir
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-6-x86_64/root/proc/filesystems'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-6-x86_64/root/var/cache/yum'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/dev/pts'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/dev/shm'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/sys'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:308:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-6-x86_64/root/proc'] with env {'LANG': 'en_US.utf8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:348:  Child return code was: 0
+DEBUG util.py:112:  kill orphans
